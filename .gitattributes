@@ -1,0 +1,3 @@
+# Keep exact bytes: the P0 gate checks SHA-256 of frozen source and model fixtures.
+# New shell scripts are authored with LF line endings.
+* -text whitespace=cr-at-eol

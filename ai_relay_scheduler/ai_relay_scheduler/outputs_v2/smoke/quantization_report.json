@@ -1,0 +1,93 @@
+{
+  "data_source": "simulation",
+  "stage": "PC CPU only; not NPU validation",
+  "quantized_layers": 3,
+  "npu_validated": false,
+  "export_max_abs_error": 4.470348358154297e-08,
+  "environment": {
+    "python": "3.13.13",
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.0"
+  },
+  "models": {
+    "FP32": {
+      "horizons": [
+        {
+          "samples": 174,
+          "positives": 92,
+          "tp": 92,
+          "fp": 82,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 0.5287356321839081,
+          "accuracy": 0.5287356321839081,
+          "brier": 0.24026845494251223,
+          "threshold": 0.43
+        },
+        {
+          "samples": 114,
+          "positives": 74,
+          "tp": 74,
+          "fp": 40,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 0.6491228070175439,
+          "accuracy": 0.6491228070175439,
+          "brier": 0.24323385443054332,
+          "threshold": 0.485
+        }
+      ],
+      "bytes": 34229,
+      "sha256": "01aa41ed89e374ca5c84dc72cd88a492f9c69b899b64e2feca726c9225627f7f",
+      "latency_ms": {
+        "mean": 0.025632999999999996,
+        "p95": 0.026404999999999998,
+        "p99": 0.029142000000000022,
+        "repetitions": 100
+      }
+    },
+    "INT8_PC": {
+      "horizons": [
+        {
+          "samples": 174,
+          "positives": 92,
+          "tp": 92,
+          "fp": 82,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 0.5287356321839081,
+          "accuracy": 0.5287356321839081,
+          "brier": 0.24025587332532136,
+          "threshold": 0.43
+        },
+        {
+          "samples": 114,
+          "positives": 74,
+          "tp": 74,
+          "fp": 40,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 0.6491228070175439,
+          "accuracy": 0.6491228070175439,
+          "brier": 0.24322581735934196,
+          "threshold": 0.485
+        }
+      ],
+      "bytes": 13010,
+      "sha256": "6cc2d507343b6796ded5009fed74838a0ce677de530c576f4a49184f636ee938",
+      "latency_ms": {
+        "mean": 0.035774,
+        "p95": 0.0365,
+        "p99": 0.045288000000000043,
+        "repetitions": 100
+      }
+    }
+  },
+  "recall_drop_pp": [
+    0.0,
+    0.0
+  ],
+  "quantization_pass": true
+}

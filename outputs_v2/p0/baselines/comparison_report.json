@@ -1,0 +1,1595 @@
+{
+  "simulation_contract_version": "warehouse-abc-v3",
+  "profile_version": "mission-profile-v1",
+  "profile_sha256": "1687015d91b7cb17a545312178ef4eea63fe5d44b806ba588ec11eb58a7ab40b",
+  "rounds_per_run": 5,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "required_metrics": [
+    "outage_count",
+    "outage_s",
+    "total_switches",
+    "relay_occupancy_ratio",
+    "deployment_success_rate"
+  ],
+  "rows": [
+    {
+      "success": true,
+      "failure_reason": null,
+      "completed_rounds": 5,
+      "main_distance_m": 230.0,
+      "relay_distance_m": 22.0,
+      "all_phase_outage_s": 18.8,
+      "longest_outage_s": 4.4,
+      "outage_events": 25,
+      "total_switches": 94,
+      "total_time_s": 269.5,
+      "phase_time_s": {
+        "DEPLOY": 19.2,
+        "DWELL": 10.0,
+        "FLY": 230.0,
+        "LINK_HOLD": 5.2,
+        "RECOVER": 5.1
+      },
+      "deployment_count": 11,
+      "deployment_successes": 11,
+      "relay_hop_s": 183.3,
+      "pingpong_count": 25,
+      "scenario": 0,
+      "strategy": "reactive",
+      "rounds": 5,
+      "outage_count": 25,
+      "outage_s": 18.8,
+      "relay_occupancy_ratio": 0.680148,
+      "deployment_success_rate": 1.0,
+      "config": {
+        "rounds": 5,
+        "columns": 3,
+        "rows": 4,
+        "vehicle_kind": "relay_drone",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "main_speed_mps": 1.0,
+        "relay_speed_mps": 2.0,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "mode": "random",
+        "seed": 42,
+        "window_start_s": 2.0,
+        "window_end_s": 12.0,
+        "sensor_range_cells": 0.76,
+        "service_dbm": -75.0,
+        "disconnect_dbm": -88.0,
+        "shelf_loss_db": 12.0,
+        "p0_dbm": -40.0,
+        "path_loss_n": 2.2,
+        "planning_step_cells": 0.5,
+        "initial_stations": [
+          [
+            1.0,
+            2.0
+          ],
+          [
+            2.0,
+            4.0
+          ]
+        ],
+        "model_plugin": "",
+        "predictor_path": "",
+        "inference_timeout_s": 0.2,
+        "inference_period_s": 0.5,
+        "short_horizon_s": 1.5,
+        "deploy_horizon_s": 6.0,
+        "takeoff_s": 2.0,
+        "settle_s": 0.5,
+        "probe_s": 0.2,
+        "route_ack_s": 0.3,
+        "route_timeout_s": 2.0,
+        "min_dwell_s": 1.0,
+        "hysteresis_db": 3.0,
+        "reactive_on_slots": 3,
+        "deployment_timeout_s": 40.0,
+        "measurement_max_age_s": 0.5,
+        "measurement_delay_s": 0.1,
+        "measurement_drop_rate": 0.02,
+        "noise_sigma_db": 1.0,
+        "ack_drop_rate": 0.0,
+        "map_observation": "static",
+        "strategy": "reactive",
+        "rolling_replan_s": 5.0,
+        "battery_reserve": 0.15,
+        "battery_per_m": 0.0005,
+        "battery_per_s": 5e-05,
+        "record_learning": false,
+        "failsafe_hold_s": 5.0
+      },
+      "contract": {
+        "version": "warehouse-abc-v3",
+        "profile_version": "mission-profile-v1",
+        "profile_sha256": "1687015d91b7cb17a545312178ef4eea63fe5d44b806ba588ec11eb58a7ab40b",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "outward_route": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            4.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            2.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ]
+        ],
+        "single_leg_m": 23.0,
+        "coordinates": "grid; multiply by cell_m for metres",
+        "progress": "distance from current leg start; reset only at leg change; frozen during waits",
+        "segment": "zero-based segment in direction-specific route; vertex belongs to incoming segment",
+        "time": "seconds since run start, monotonic; post-step samples; sample_time_s is acquisition time",
+        "dwell": "at terminal after outbound and home after return, including final round",
+        "radio": {
+          "p0_dbm": -40.0,
+          "path_loss_n": 2.2,
+          "shelf_loss_db": 12.0,
+          "reference_distance_m": 1.0,
+          "gain_db": 0.0,
+          "occlusion": "each occupied cell open interior once; boundaries/corners excluded",
+          "topology": "six symmetric physical links; five simple paths; weakest hop; no gain"
+        }
+      }
+    },
+    {
+      "success": true,
+      "failure_reason": null,
+      "completed_rounds": 5,
+      "main_distance_m": 230.0,
+      "relay_distance_m": 12.0,
+      "all_phase_outage_s": 10.9,
+      "longest_outage_s": 1.2,
+      "outage_events": 29,
+      "total_switches": 105,
+      "total_time_s": 256.4,
+      "phase_time_s": {
+        "DEPLOY": 9.2,
+        "DWELL": 10.0,
+        "FLY": 230.0,
+        "LINK_HOLD": 3.1,
+        "RECOVER": 4.1
+      },
+      "deployment_count": 10,
+      "deployment_successes": 10,
+      "relay_hop_s": 164.7,
+      "pingpong_count": 30,
+      "scenario": 0,
+      "strategy": "predeploy",
+      "rounds": 5,
+      "outage_count": 29,
+      "outage_s": 10.9,
+      "relay_occupancy_ratio": 0.642356,
+      "deployment_success_rate": 1.0,
+      "config": {
+        "rounds": 5,
+        "columns": 3,
+        "rows": 4,
+        "vehicle_kind": "relay_drone",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "main_speed_mps": 1.0,
+        "relay_speed_mps": 2.0,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "mode": "random",
+        "seed": 42,
+        "window_start_s": 2.0,
+        "window_end_s": 12.0,
+        "sensor_range_cells": 0.76,
+        "service_dbm": -75.0,
+        "disconnect_dbm": -88.0,
+        "shelf_loss_db": 12.0,
+        "p0_dbm": -40.0,
+        "path_loss_n": 2.2,
+        "planning_step_cells": 0.5,
+        "initial_stations": [
+          [
+            1.0,
+            2.0
+          ],
+          [
+            2.0,
+            4.0
+          ]
+        ],
+        "model_plugin": "",
+        "predictor_path": "",
+        "inference_timeout_s": 0.2,
+        "inference_period_s": 0.5,
+        "short_horizon_s": 1.5,
+        "deploy_horizon_s": 6.0,
+        "takeoff_s": 2.0,
+        "settle_s": 0.5,
+        "probe_s": 0.2,
+        "route_ack_s": 0.3,
+        "route_timeout_s": 2.0,
+        "min_dwell_s": 1.0,
+        "hysteresis_db": 3.0,
+        "reactive_on_slots": 3,
+        "deployment_timeout_s": 40.0,
+        "measurement_max_age_s": 0.5,
+        "measurement_delay_s": 0.1,
+        "measurement_drop_rate": 0.02,
+        "noise_sigma_db": 1.0,
+        "ack_drop_rate": 0.0,
+        "map_observation": "static",
+        "strategy": "predeploy",
+        "rolling_replan_s": 5.0,
+        "battery_reserve": 0.15,
+        "battery_per_m": 0.0005,
+        "battery_per_s": 5e-05,
+        "record_learning": false,
+        "failsafe_hold_s": 5.0
+      },
+      "contract": {
+        "version": "warehouse-abc-v3",
+        "profile_version": "mission-profile-v1",
+        "profile_sha256": "1687015d91b7cb17a545312178ef4eea63fe5d44b806ba588ec11eb58a7ab40b",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "outward_route": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            4.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            2.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ]
+        ],
+        "single_leg_m": 23.0,
+        "coordinates": "grid; multiply by cell_m for metres",
+        "progress": "distance from current leg start; reset only at leg change; frozen during waits",
+        "segment": "zero-based segment in direction-specific route; vertex belongs to incoming segment",
+        "time": "seconds since run start, monotonic; post-step samples; sample_time_s is acquisition time",
+        "dwell": "at terminal after outbound and home after return, including final round",
+        "radio": {
+          "p0_dbm": -40.0,
+          "path_loss_n": 2.2,
+          "shelf_loss_db": 12.0,
+          "reference_distance_m": 1.0,
+          "gain_db": 0.0,
+          "occlusion": "each occupied cell open interior once; boundaries/corners excluded",
+          "topology": "six symmetric physical links; five simple paths; weakest hop; no gain"
+        }
+      }
+    },
+    {
+      "success": true,
+      "failure_reason": null,
+      "completed_rounds": 5,
+      "main_distance_m": 230.0,
+      "relay_distance_m": 20.0,
+      "all_phase_outage_s": 14.3,
+      "longest_outage_s": 4.2,
+      "outage_events": 14,
+      "total_switches": 96,
+      "total_time_s": 264.3,
+      "phase_time_s": {
+        "DEPLOY": 17.8,
+        "DWELL": 10.0,
+        "FLY": 230.0,
+        "LINK_HOLD": 2.4,
+        "RECOVER": 4.1
+      },
+      "deployment_count": 11,
+      "deployment_successes": 11,
+      "relay_hop_s": 167.9,
+      "pingpong_count": 31,
+      "scenario": 1,
+      "strategy": "reactive",
+      "rounds": 5,
+      "outage_count": 14,
+      "outage_s": 14.3,
+      "relay_occupancy_ratio": 0.635263,
+      "deployment_success_rate": 1.0,
+      "config": {
+        "rounds": 5,
+        "columns": 3,
+        "rows": 4,
+        "vehicle_kind": "relay_drone",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "main_speed_mps": 1.0,
+        "relay_speed_mps": 2.0,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "mode": "random",
+        "seed": 43,
+        "window_start_s": 2.0,
+        "window_end_s": 12.0,
+        "sensor_range_cells": 0.76,
+        "service_dbm": -75.0,
+        "disconnect_dbm": -88.0,
+        "shelf_loss_db": 12.0,
+        "p0_dbm": -40.0,
+        "path_loss_n": 2.2,
+        "planning_step_cells": 0.5,
+        "initial_stations": [
+          [
+            1.0,
+            2.0
+          ],
+          [
+            2.0,
+            4.0
+          ]
+        ],
+        "model_plugin": "",
+        "predictor_path": "",
+        "inference_timeout_s": 0.2,
+        "inference_period_s": 0.5,
+        "short_horizon_s": 1.5,
+        "deploy_horizon_s": 6.0,
+        "takeoff_s": 2.0,
+        "settle_s": 0.5,
+        "probe_s": 0.2,
+        "route_ack_s": 0.3,
+        "route_timeout_s": 2.0,
+        "min_dwell_s": 1.0,
+        "hysteresis_db": 3.0,
+        "reactive_on_slots": 3,
+        "deployment_timeout_s": 40.0,
+        "measurement_max_age_s": 0.5,
+        "measurement_delay_s": 0.1,
+        "measurement_drop_rate": 0.02,
+        "noise_sigma_db": 1.0,
+        "ack_drop_rate": 0.0,
+        "map_observation": "static",
+        "strategy": "reactive",
+        "rolling_replan_s": 5.0,
+        "battery_reserve": 0.15,
+        "battery_per_m": 0.0005,
+        "battery_per_s": 5e-05,
+        "record_learning": false,
+        "failsafe_hold_s": 5.0
+      },
+      "contract": {
+        "version": "warehouse-abc-v3",
+        "profile_version": "mission-profile-v1",
+        "profile_sha256": "1687015d91b7cb17a545312178ef4eea63fe5d44b806ba588ec11eb58a7ab40b",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "outward_route": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            4.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            2.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ]
+        ],
+        "single_leg_m": 23.0,
+        "coordinates": "grid; multiply by cell_m for metres",
+        "progress": "distance from current leg start; reset only at leg change; frozen during waits",
+        "segment": "zero-based segment in direction-specific route; vertex belongs to incoming segment",
+        "time": "seconds since run start, monotonic; post-step samples; sample_time_s is acquisition time",
+        "dwell": "at terminal after outbound and home after return, including final round",
+        "radio": {
+          "p0_dbm": -40.0,
+          "path_loss_n": 2.2,
+          "shelf_loss_db": 12.0,
+          "reference_distance_m": 1.0,
+          "gain_db": 0.0,
+          "occlusion": "each occupied cell open interior once; boundaries/corners excluded",
+          "topology": "six symmetric physical links; five simple paths; weakest hop; no gain"
+        }
+      }
+    },
+    {
+      "success": true,
+      "failure_reason": null,
+      "completed_rounds": 5,
+      "main_distance_m": 230.0,
+      "relay_distance_m": 12.0,
+      "all_phase_outage_s": 3.5,
+      "longest_outage_s": 1.1,
+      "outage_events": 10,
+      "total_switches": 106,
+      "total_time_s": 254.3,
+      "phase_time_s": {
+        "DEPLOY": 9.2,
+        "DWELL": 10.0,
+        "FLY": 230.0,
+        "LINK_HOLD": 1.0,
+        "RECOVER": 4.1
+      },
+      "deployment_count": 10,
+      "deployment_successes": 10,
+      "relay_hop_s": 167.9,
+      "pingpong_count": 43,
+      "scenario": 1,
+      "strategy": "predeploy",
+      "rounds": 5,
+      "outage_count": 10,
+      "outage_s": 3.5,
+      "relay_occupancy_ratio": 0.660244,
+      "deployment_success_rate": 1.0,
+      "config": {
+        "rounds": 5,
+        "columns": 3,
+        "rows": 4,
+        "vehicle_kind": "relay_drone",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "main_speed_mps": 1.0,
+        "relay_speed_mps": 2.0,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "mode": "random",
+        "seed": 43,
+        "window_start_s": 2.0,
+        "window_end_s": 12.0,
+        "sensor_range_cells": 0.76,
+        "service_dbm": -75.0,
+        "disconnect_dbm": -88.0,
+        "shelf_loss_db": 12.0,
+        "p0_dbm": -40.0,
+        "path_loss_n": 2.2,
+        "planning_step_cells": 0.5,
+        "initial_stations": [
+          [
+            1.0,
+            2.0
+          ],
+          [
+            2.0,
+            4.0
+          ]
+        ],
+        "model_plugin": "",
+        "predictor_path": "",
+        "inference_timeout_s": 0.2,
+        "inference_period_s": 0.5,
+        "short_horizon_s": 1.5,
+        "deploy_horizon_s": 6.0,
+        "takeoff_s": 2.0,
+        "settle_s": 0.5,
+        "probe_s": 0.2,
+        "route_ack_s": 0.3,
+        "route_timeout_s": 2.0,
+        "min_dwell_s": 1.0,
+        "hysteresis_db": 3.0,
+        "reactive_on_slots": 3,
+        "deployment_timeout_s": 40.0,
+        "measurement_max_age_s": 0.5,
+        "measurement_delay_s": 0.1,
+        "measurement_drop_rate": 0.02,
+        "noise_sigma_db": 1.0,
+        "ack_drop_rate": 0.0,
+        "map_observation": "static",
+        "strategy": "predeploy",
+        "rolling_replan_s": 5.0,
+        "battery_reserve": 0.15,
+        "battery_per_m": 0.0005,
+        "battery_per_s": 5e-05,
+        "record_learning": false,
+        "failsafe_hold_s": 5.0
+      },
+      "contract": {
+        "version": "warehouse-abc-v3",
+        "profile_version": "mission-profile-v1",
+        "profile_sha256": "1687015d91b7cb17a545312178ef4eea63fe5d44b806ba588ec11eb58a7ab40b",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "outward_route": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            4.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            2.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ]
+        ],
+        "single_leg_m": 23.0,
+        "coordinates": "grid; multiply by cell_m for metres",
+        "progress": "distance from current leg start; reset only at leg change; frozen during waits",
+        "segment": "zero-based segment in direction-specific route; vertex belongs to incoming segment",
+        "time": "seconds since run start, monotonic; post-step samples; sample_time_s is acquisition time",
+        "dwell": "at terminal after outbound and home after return, including final round",
+        "radio": {
+          "p0_dbm": -40.0,
+          "path_loss_n": 2.2,
+          "shelf_loss_db": 12.0,
+          "reference_distance_m": 1.0,
+          "gain_db": 0.0,
+          "occlusion": "each occupied cell open interior once; boundaries/corners excluded",
+          "topology": "six symmetric physical links; five simple paths; weakest hop; no gain"
+        }
+      }
+    },
+    {
+      "success": true,
+      "failure_reason": null,
+      "completed_rounds": 5,
+      "main_distance_m": 230.0,
+      "relay_distance_m": 18.0,
+      "all_phase_outage_s": 13.2,
+      "longest_outage_s": 4.2,
+      "outage_events": 15,
+      "total_switches": 94,
+      "total_time_s": 261.0,
+      "phase_time_s": {
+        "DEPLOY": 13.3,
+        "DWELL": 10.0,
+        "FLY": 230.0,
+        "LINK_HOLD": 3.1,
+        "RECOVER": 4.6
+      },
+      "deployment_count": 6,
+      "deployment_successes": 6,
+      "relay_hop_s": 175.3,
+      "pingpong_count": 28,
+      "scenario": 2,
+      "strategy": "reactive",
+      "rounds": 5,
+      "outage_count": 15,
+      "outage_s": 13.2,
+      "relay_occupancy_ratio": 0.671648,
+      "deployment_success_rate": 1.0,
+      "config": {
+        "rounds": 5,
+        "columns": 3,
+        "rows": 4,
+        "vehicle_kind": "relay_drone",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "main_speed_mps": 1.0,
+        "relay_speed_mps": 2.0,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "mode": "random",
+        "seed": 44,
+        "window_start_s": 2.0,
+        "window_end_s": 12.0,
+        "sensor_range_cells": 0.76,
+        "service_dbm": -75.0,
+        "disconnect_dbm": -88.0,
+        "shelf_loss_db": 12.0,
+        "p0_dbm": -40.0,
+        "path_loss_n": 2.2,
+        "planning_step_cells": 0.5,
+        "initial_stations": [
+          [
+            1.0,
+            2.0
+          ],
+          [
+            2.0,
+            4.0
+          ]
+        ],
+        "model_plugin": "",
+        "predictor_path": "",
+        "inference_timeout_s": 0.2,
+        "inference_period_s": 0.5,
+        "short_horizon_s": 1.5,
+        "deploy_horizon_s": 6.0,
+        "takeoff_s": 2.0,
+        "settle_s": 0.5,
+        "probe_s": 0.2,
+        "route_ack_s": 0.3,
+        "route_timeout_s": 2.0,
+        "min_dwell_s": 1.0,
+        "hysteresis_db": 3.0,
+        "reactive_on_slots": 3,
+        "deployment_timeout_s": 40.0,
+        "measurement_max_age_s": 0.5,
+        "measurement_delay_s": 0.1,
+        "measurement_drop_rate": 0.02,
+        "noise_sigma_db": 1.0,
+        "ack_drop_rate": 0.0,
+        "map_observation": "static",
+        "strategy": "reactive",
+        "rolling_replan_s": 5.0,
+        "battery_reserve": 0.15,
+        "battery_per_m": 0.0005,
+        "battery_per_s": 5e-05,
+        "record_learning": false,
+        "failsafe_hold_s": 5.0
+      },
+      "contract": {
+        "version": "warehouse-abc-v3",
+        "profile_version": "mission-profile-v1",
+        "profile_sha256": "1687015d91b7cb17a545312178ef4eea63fe5d44b806ba588ec11eb58a7ab40b",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "outward_route": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            4.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            2.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ]
+        ],
+        "single_leg_m": 23.0,
+        "coordinates": "grid; multiply by cell_m for metres",
+        "progress": "distance from current leg start; reset only at leg change; frozen during waits",
+        "segment": "zero-based segment in direction-specific route; vertex belongs to incoming segment",
+        "time": "seconds since run start, monotonic; post-step samples; sample_time_s is acquisition time",
+        "dwell": "at terminal after outbound and home after return, including final round",
+        "radio": {
+          "p0_dbm": -40.0,
+          "path_loss_n": 2.2,
+          "shelf_loss_db": 12.0,
+          "reference_distance_m": 1.0,
+          "gain_db": 0.0,
+          "occlusion": "each occupied cell open interior once; boundaries/corners excluded",
+          "topology": "six symmetric physical links; five simple paths; weakest hop; no gain"
+        }
+      }
+    },
+    {
+      "success": true,
+      "failure_reason": null,
+      "completed_rounds": 5,
+      "main_distance_m": 230.0,
+      "relay_distance_m": 12.0,
+      "all_phase_outage_s": 3.6,
+      "longest_outage_s": 1.0,
+      "outage_events": 8,
+      "total_switches": 94,
+      "total_time_s": 254.4,
+      "phase_time_s": {
+        "DEPLOY": 9.2,
+        "DWELL": 10.0,
+        "FLY": 230.0,
+        "LINK_HOLD": 1.1,
+        "RECOVER": 4.1
+      },
+      "deployment_count": 10,
+      "deployment_successes": 10,
+      "relay_hop_s": 169.5,
+      "pingpong_count": 28,
+      "scenario": 2,
+      "strategy": "predeploy",
+      "rounds": 5,
+      "outage_count": 8,
+      "outage_s": 3.6,
+      "relay_occupancy_ratio": 0.666274,
+      "deployment_success_rate": 1.0,
+      "config": {
+        "rounds": 5,
+        "columns": 3,
+        "rows": 4,
+        "vehicle_kind": "relay_drone",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "main_speed_mps": 1.0,
+        "relay_speed_mps": 2.0,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "mode": "random",
+        "seed": 44,
+        "window_start_s": 2.0,
+        "window_end_s": 12.0,
+        "sensor_range_cells": 0.76,
+        "service_dbm": -75.0,
+        "disconnect_dbm": -88.0,
+        "shelf_loss_db": 12.0,
+        "p0_dbm": -40.0,
+        "path_loss_n": 2.2,
+        "planning_step_cells": 0.5,
+        "initial_stations": [
+          [
+            1.0,
+            2.0
+          ],
+          [
+            2.0,
+            4.0
+          ]
+        ],
+        "model_plugin": "",
+        "predictor_path": "",
+        "inference_timeout_s": 0.2,
+        "inference_period_s": 0.5,
+        "short_horizon_s": 1.5,
+        "deploy_horizon_s": 6.0,
+        "takeoff_s": 2.0,
+        "settle_s": 0.5,
+        "probe_s": 0.2,
+        "route_ack_s": 0.3,
+        "route_timeout_s": 2.0,
+        "min_dwell_s": 1.0,
+        "hysteresis_db": 3.0,
+        "reactive_on_slots": 3,
+        "deployment_timeout_s": 40.0,
+        "measurement_max_age_s": 0.5,
+        "measurement_delay_s": 0.1,
+        "measurement_drop_rate": 0.02,
+        "noise_sigma_db": 1.0,
+        "ack_drop_rate": 0.0,
+        "map_observation": "static",
+        "strategy": "predeploy",
+        "rolling_replan_s": 5.0,
+        "battery_reserve": 0.15,
+        "battery_per_m": 0.0005,
+        "battery_per_s": 5e-05,
+        "record_learning": false,
+        "failsafe_hold_s": 5.0
+      },
+      "contract": {
+        "version": "warehouse-abc-v3",
+        "profile_version": "mission-profile-v1",
+        "profile_sha256": "1687015d91b7cb17a545312178ef4eea63fe5d44b806ba588ec11eb58a7ab40b",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "outward_route": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            4.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            2.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ]
+        ],
+        "single_leg_m": 23.0,
+        "coordinates": "grid; multiply by cell_m for metres",
+        "progress": "distance from current leg start; reset only at leg change; frozen during waits",
+        "segment": "zero-based segment in direction-specific route; vertex belongs to incoming segment",
+        "time": "seconds since run start, monotonic; post-step samples; sample_time_s is acquisition time",
+        "dwell": "at terminal after outbound and home after return, including final round",
+        "radio": {
+          "p0_dbm": -40.0,
+          "path_loss_n": 2.2,
+          "shelf_loss_db": 12.0,
+          "reference_distance_m": 1.0,
+          "gain_db": 0.0,
+          "occlusion": "each occupied cell open interior once; boundaries/corners excluded",
+          "topology": "six symmetric physical links; five simple paths; weakest hop; no gain"
+        }
+      }
+    },
+    {
+      "success": true,
+      "failure_reason": null,
+      "completed_rounds": 5,
+      "main_distance_m": 230.0,
+      "relay_distance_m": 20.0,
+      "all_phase_outage_s": 15.3,
+      "longest_outage_s": 4.2,
+      "outage_events": 30,
+      "total_switches": 102,
+      "total_time_s": 262.6,
+      "phase_time_s": {
+        "DEPLOY": 15.5,
+        "DWELL": 10.0,
+        "FLY": 230.0,
+        "LINK_HOLD": 2.5,
+        "RECOVER": 4.6
+      },
+      "deployment_count": 8,
+      "deployment_successes": 8,
+      "relay_hop_s": 169.6,
+      "pingpong_count": 35,
+      "scenario": 3,
+      "strategy": "reactive",
+      "rounds": 5,
+      "outage_count": 30,
+      "outage_s": 15.3,
+      "relay_occupancy_ratio": 0.645849,
+      "deployment_success_rate": 1.0,
+      "config": {
+        "rounds": 5,
+        "columns": 3,
+        "rows": 4,
+        "vehicle_kind": "relay_drone",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "main_speed_mps": 1.0,
+        "relay_speed_mps": 2.0,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "mode": "random",
+        "seed": 45,
+        "window_start_s": 2.0,
+        "window_end_s": 12.0,
+        "sensor_range_cells": 0.76,
+        "service_dbm": -75.0,
+        "disconnect_dbm": -88.0,
+        "shelf_loss_db": 12.0,
+        "p0_dbm": -40.0,
+        "path_loss_n": 2.2,
+        "planning_step_cells": 0.5,
+        "initial_stations": [
+          [
+            1.0,
+            2.0
+          ],
+          [
+            2.0,
+            4.0
+          ]
+        ],
+        "model_plugin": "",
+        "predictor_path": "",
+        "inference_timeout_s": 0.2,
+        "inference_period_s": 0.5,
+        "short_horizon_s": 1.5,
+        "deploy_horizon_s": 6.0,
+        "takeoff_s": 2.0,
+        "settle_s": 0.5,
+        "probe_s": 0.2,
+        "route_ack_s": 0.3,
+        "route_timeout_s": 2.0,
+        "min_dwell_s": 1.0,
+        "hysteresis_db": 3.0,
+        "reactive_on_slots": 3,
+        "deployment_timeout_s": 40.0,
+        "measurement_max_age_s": 0.5,
+        "measurement_delay_s": 0.1,
+        "measurement_drop_rate": 0.02,
+        "noise_sigma_db": 1.0,
+        "ack_drop_rate": 0.0,
+        "map_observation": "static",
+        "strategy": "reactive",
+        "rolling_replan_s": 5.0,
+        "battery_reserve": 0.15,
+        "battery_per_m": 0.0005,
+        "battery_per_s": 5e-05,
+        "record_learning": false,
+        "failsafe_hold_s": 5.0
+      },
+      "contract": {
+        "version": "warehouse-abc-v3",
+        "profile_version": "mission-profile-v1",
+        "profile_sha256": "1687015d91b7cb17a545312178ef4eea63fe5d44b806ba588ec11eb58a7ab40b",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "outward_route": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            4.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            2.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ]
+        ],
+        "single_leg_m": 23.0,
+        "coordinates": "grid; multiply by cell_m for metres",
+        "progress": "distance from current leg start; reset only at leg change; frozen during waits",
+        "segment": "zero-based segment in direction-specific route; vertex belongs to incoming segment",
+        "time": "seconds since run start, monotonic; post-step samples; sample_time_s is acquisition time",
+        "dwell": "at terminal after outbound and home after return, including final round",
+        "radio": {
+          "p0_dbm": -40.0,
+          "path_loss_n": 2.2,
+          "shelf_loss_db": 12.0,
+          "reference_distance_m": 1.0,
+          "gain_db": 0.0,
+          "occlusion": "each occupied cell open interior once; boundaries/corners excluded",
+          "topology": "six symmetric physical links; five simple paths; weakest hop; no gain"
+        }
+      }
+    },
+    {
+      "success": true,
+      "failure_reason": null,
+      "completed_rounds": 5,
+      "main_distance_m": 230.0,
+      "relay_distance_m": 12.0,
+      "all_phase_outage_s": 8.4,
+      "longest_outage_s": 0.8,
+      "outage_events": 19,
+      "total_switches": 91,
+      "total_time_s": 255.4,
+      "phase_time_s": {
+        "DEPLOY": 9.2,
+        "DWELL": 10.0,
+        "FLY": 230.0,
+        "LINK_HOLD": 2.1,
+        "RECOVER": 4.1
+      },
+      "deployment_count": 10,
+      "deployment_successes": 10,
+      "relay_hop_s": 195.6,
+      "pingpong_count": 17,
+      "scenario": 3,
+      "strategy": "predeploy",
+      "rounds": 5,
+      "outage_count": 19,
+      "outage_s": 8.4,
+      "relay_occupancy_ratio": 0.765857,
+      "deployment_success_rate": 1.0,
+      "config": {
+        "rounds": 5,
+        "columns": 3,
+        "rows": 4,
+        "vehicle_kind": "relay_drone",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "main_speed_mps": 1.0,
+        "relay_speed_mps": 2.0,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "mode": "random",
+        "seed": 45,
+        "window_start_s": 2.0,
+        "window_end_s": 12.0,
+        "sensor_range_cells": 0.76,
+        "service_dbm": -75.0,
+        "disconnect_dbm": -88.0,
+        "shelf_loss_db": 12.0,
+        "p0_dbm": -40.0,
+        "path_loss_n": 2.2,
+        "planning_step_cells": 0.5,
+        "initial_stations": [
+          [
+            1.0,
+            2.0
+          ],
+          [
+            2.0,
+            4.0
+          ]
+        ],
+        "model_plugin": "",
+        "predictor_path": "",
+        "inference_timeout_s": 0.2,
+        "inference_period_s": 0.5,
+        "short_horizon_s": 1.5,
+        "deploy_horizon_s": 6.0,
+        "takeoff_s": 2.0,
+        "settle_s": 0.5,
+        "probe_s": 0.2,
+        "route_ack_s": 0.3,
+        "route_timeout_s": 2.0,
+        "min_dwell_s": 1.0,
+        "hysteresis_db": 3.0,
+        "reactive_on_slots": 3,
+        "deployment_timeout_s": 40.0,
+        "measurement_max_age_s": 0.5,
+        "measurement_delay_s": 0.1,
+        "measurement_drop_rate": 0.02,
+        "noise_sigma_db": 1.0,
+        "ack_drop_rate": 0.0,
+        "map_observation": "static",
+        "strategy": "predeploy",
+        "rolling_replan_s": 5.0,
+        "battery_reserve": 0.15,
+        "battery_per_m": 0.0005,
+        "battery_per_s": 5e-05,
+        "record_learning": false,
+        "failsafe_hold_s": 5.0
+      },
+      "contract": {
+        "version": "warehouse-abc-v3",
+        "profile_version": "mission-profile-v1",
+        "profile_sha256": "1687015d91b7cb17a545312178ef4eea63fe5d44b806ba588ec11eb58a7ab40b",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "outward_route": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            4.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            2.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ]
+        ],
+        "single_leg_m": 23.0,
+        "coordinates": "grid; multiply by cell_m for metres",
+        "progress": "distance from current leg start; reset only at leg change; frozen during waits",
+        "segment": "zero-based segment in direction-specific route; vertex belongs to incoming segment",
+        "time": "seconds since run start, monotonic; post-step samples; sample_time_s is acquisition time",
+        "dwell": "at terminal after outbound and home after return, including final round",
+        "radio": {
+          "p0_dbm": -40.0,
+          "path_loss_n": 2.2,
+          "shelf_loss_db": 12.0,
+          "reference_distance_m": 1.0,
+          "gain_db": 0.0,
+          "occlusion": "each occupied cell open interior once; boundaries/corners excluded",
+          "topology": "six symmetric physical links; five simple paths; weakest hop; no gain"
+        }
+      }
+    },
+    {
+      "success": true,
+      "failure_reason": null,
+      "completed_rounds": 5,
+      "main_distance_m": 230.0,
+      "relay_distance_m": 20.0,
+      "all_phase_outage_s": 10.5,
+      "longest_outage_s": 4.2,
+      "outage_events": 12,
+      "total_switches": 96,
+      "total_time_s": 262.4,
+      "phase_time_s": {
+        "DEPLOY": 15.5,
+        "DWELL": 10.0,
+        "FLY": 230.0,
+        "LINK_HOLD": 2.3,
+        "RECOVER": 4.6
+      },
+      "deployment_count": 8,
+      "deployment_successes": 8,
+      "relay_hop_s": 158.5,
+      "pingpong_count": 31,
+      "scenario": 4,
+      "strategy": "reactive",
+      "rounds": 5,
+      "outage_count": 12,
+      "outage_s": 10.5,
+      "relay_occupancy_ratio": 0.60404,
+      "deployment_success_rate": 1.0,
+      "config": {
+        "rounds": 5,
+        "columns": 3,
+        "rows": 4,
+        "vehicle_kind": "relay_drone",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "main_speed_mps": 1.0,
+        "relay_speed_mps": 2.0,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "mode": "random",
+        "seed": 46,
+        "window_start_s": 2.0,
+        "window_end_s": 12.0,
+        "sensor_range_cells": 0.76,
+        "service_dbm": -75.0,
+        "disconnect_dbm": -88.0,
+        "shelf_loss_db": 12.0,
+        "p0_dbm": -40.0,
+        "path_loss_n": 2.2,
+        "planning_step_cells": 0.5,
+        "initial_stations": [
+          [
+            1.0,
+            2.0
+          ],
+          [
+            2.0,
+            4.0
+          ]
+        ],
+        "model_plugin": "",
+        "predictor_path": "",
+        "inference_timeout_s": 0.2,
+        "inference_period_s": 0.5,
+        "short_horizon_s": 1.5,
+        "deploy_horizon_s": 6.0,
+        "takeoff_s": 2.0,
+        "settle_s": 0.5,
+        "probe_s": 0.2,
+        "route_ack_s": 0.3,
+        "route_timeout_s": 2.0,
+        "min_dwell_s": 1.0,
+        "hysteresis_db": 3.0,
+        "reactive_on_slots": 3,
+        "deployment_timeout_s": 40.0,
+        "measurement_max_age_s": 0.5,
+        "measurement_delay_s": 0.1,
+        "measurement_drop_rate": 0.02,
+        "noise_sigma_db": 1.0,
+        "ack_drop_rate": 0.0,
+        "map_observation": "static",
+        "strategy": "reactive",
+        "rolling_replan_s": 5.0,
+        "battery_reserve": 0.15,
+        "battery_per_m": 0.0005,
+        "battery_per_s": 5e-05,
+        "record_learning": false,
+        "failsafe_hold_s": 5.0
+      },
+      "contract": {
+        "version": "warehouse-abc-v3",
+        "profile_version": "mission-profile-v1",
+        "profile_sha256": "1687015d91b7cb17a545312178ef4eea63fe5d44b806ba588ec11eb58a7ab40b",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "outward_route": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            4.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            2.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ]
+        ],
+        "single_leg_m": 23.0,
+        "coordinates": "grid; multiply by cell_m for metres",
+        "progress": "distance from current leg start; reset only at leg change; frozen during waits",
+        "segment": "zero-based segment in direction-specific route; vertex belongs to incoming segment",
+        "time": "seconds since run start, monotonic; post-step samples; sample_time_s is acquisition time",
+        "dwell": "at terminal after outbound and home after return, including final round",
+        "radio": {
+          "p0_dbm": -40.0,
+          "path_loss_n": 2.2,
+          "shelf_loss_db": 12.0,
+          "reference_distance_m": 1.0,
+          "gain_db": 0.0,
+          "occlusion": "each occupied cell open interior once; boundaries/corners excluded",
+          "topology": "six symmetric physical links; five simple paths; weakest hop; no gain"
+        }
+      }
+    },
+    {
+      "success": true,
+      "failure_reason": null,
+      "completed_rounds": 5,
+      "main_distance_m": 230.0,
+      "relay_distance_m": 12.0,
+      "all_phase_outage_s": 8.2,
+      "longest_outage_s": 0.7,
+      "outage_events": 23,
+      "total_switches": 96,
+      "total_time_s": 254.3,
+      "phase_time_s": {
+        "DEPLOY": 9.2,
+        "DWELL": 10.0,
+        "FLY": 230.0,
+        "LINK_HOLD": 1.0,
+        "RECOVER": 4.1
+      },
+      "deployment_count": 10,
+      "deployment_successes": 10,
+      "relay_hop_s": 170.2,
+      "pingpong_count": 28,
+      "scenario": 4,
+      "strategy": "predeploy",
+      "rounds": 5,
+      "outage_count": 23,
+      "outage_s": 8.2,
+      "relay_occupancy_ratio": 0.669288,
+      "deployment_success_rate": 1.0,
+      "config": {
+        "rounds": 5,
+        "columns": 3,
+        "rows": 4,
+        "vehicle_kind": "relay_drone",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "main_speed_mps": 1.0,
+        "relay_speed_mps": 2.0,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "mode": "random",
+        "seed": 46,
+        "window_start_s": 2.0,
+        "window_end_s": 12.0,
+        "sensor_range_cells": 0.76,
+        "service_dbm": -75.0,
+        "disconnect_dbm": -88.0,
+        "shelf_loss_db": 12.0,
+        "p0_dbm": -40.0,
+        "path_loss_n": 2.2,
+        "planning_step_cells": 0.5,
+        "initial_stations": [
+          [
+            1.0,
+            2.0
+          ],
+          [
+            2.0,
+            4.0
+          ]
+        ],
+        "model_plugin": "",
+        "predictor_path": "",
+        "inference_timeout_s": 0.2,
+        "inference_period_s": 0.5,
+        "short_horizon_s": 1.5,
+        "deploy_horizon_s": 6.0,
+        "takeoff_s": 2.0,
+        "settle_s": 0.5,
+        "probe_s": 0.2,
+        "route_ack_s": 0.3,
+        "route_timeout_s": 2.0,
+        "min_dwell_s": 1.0,
+        "hysteresis_db": 3.0,
+        "reactive_on_slots": 3,
+        "deployment_timeout_s": 40.0,
+        "measurement_max_age_s": 0.5,
+        "measurement_delay_s": 0.1,
+        "measurement_drop_rate": 0.02,
+        "noise_sigma_db": 1.0,
+        "ack_drop_rate": 0.0,
+        "map_observation": "static",
+        "strategy": "predeploy",
+        "rolling_replan_s": 5.0,
+        "battery_reserve": 0.15,
+        "battery_per_m": 0.0005,
+        "battery_per_s": 5e-05,
+        "record_learning": false,
+        "failsafe_hold_s": 5.0
+      },
+      "contract": {
+        "version": "warehouse-abc-v3",
+        "profile_version": "mission-profile-v1",
+        "profile_sha256": "1687015d91b7cb17a545312178ef4eea63fe5d44b806ba588ec11eb58a7ab40b",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "outward_route": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            4.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            2.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ]
+        ],
+        "single_leg_m": 23.0,
+        "coordinates": "grid; multiply by cell_m for metres",
+        "progress": "distance from current leg start; reset only at leg change; frozen during waits",
+        "segment": "zero-based segment in direction-specific route; vertex belongs to incoming segment",
+        "time": "seconds since run start, monotonic; post-step samples; sample_time_s is acquisition time",
+        "dwell": "at terminal after outbound and home after return, including final round",
+        "radio": {
+          "p0_dbm": -40.0,
+          "path_loss_n": 2.2,
+          "shelf_loss_db": 12.0,
+          "reference_distance_m": 1.0,
+          "gain_db": 0.0,
+          "occlusion": "each occupied cell open interior once; boundaries/corners excluded",
+          "topology": "six symmetric physical links; five simple paths; weakest hop; no gain"
+        }
+      }
+    }
+  ],
+  "paired": [
+    {
+      "scenario": 0,
+      "both_completed": true,
+      "predeploy_minus_reactive_outage_s": -7.9,
+      "predeploy_minus_reactive_outage_count": 4,
+      "predeploy_minus_reactive_time_s": -13.100000000000023
+    },
+    {
+      "scenario": 1,
+      "both_completed": true,
+      "predeploy_minus_reactive_outage_s": -10.8,
+      "predeploy_minus_reactive_outage_count": -4,
+      "predeploy_minus_reactive_time_s": -10.0
+    },
+    {
+      "scenario": 2,
+      "both_completed": true,
+      "predeploy_minus_reactive_outage_s": -9.6,
+      "predeploy_minus_reactive_outage_count": -7,
+      "predeploy_minus_reactive_time_s": -6.599999999999994
+    },
+    {
+      "scenario": 3,
+      "both_completed": true,
+      "predeploy_minus_reactive_outage_s": -6.9,
+      "predeploy_minus_reactive_outage_count": -11,
+      "predeploy_minus_reactive_time_s": -7.200000000000017
+    },
+    {
+      "scenario": 4,
+      "both_completed": true,
+      "predeploy_minus_reactive_outage_s": -2.3000000000000007,
+      "predeploy_minus_reactive_outage_count": 11,
+      "predeploy_minus_reactive_time_s": -8.099999999999966
+    }
+  ],
+  "policies": {
+    "reactive": "current measured threshold; current-position planning only, every leg",
+    "predeploy": "known route and observed map; preflight, each leg and periodic planning"
+  },
+  "fairness": "same scenario parameters, time/link keyed noise/drop and mission-relative map change; same motion, route ACK and observation gates; no future true RSSI",
+  "caution": "Failures are failures even if accumulated outage is lower. No AI superiority claim."
+}

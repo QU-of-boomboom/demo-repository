@@ -1,0 +1,43 @@
+{
+  "schema_version": "relay-link-v2",
+  "feature_spec": {
+    "schema_version": "relay-link-v2",
+    "history_steps": 20,
+    "dt_s": 0.1,
+    "horizons_s": [
+      1.5,
+      6.0
+    ],
+    "weak_dbm": -75.0,
+    "max_age_s": 0.5,
+    "coordinate_scale_m": 10.0
+  },
+  "input_size": 96,
+  "input_name": "features",
+  "input_shape": [
+    1,
+    96
+  ],
+  "input_dtype": "float32",
+  "output_name": "logits",
+  "output_shape": [
+    1,
+    2
+  ],
+  "output_transform": "CPU sigmoid",
+  "thresholds": [
+    0.43,
+    0.485
+  ],
+  "data_source": "simulation",
+  "npu_validated": false,
+  "model_hashes": {
+    "model_fp32_batch1.onnx": "01aa41ed89e374ca5c84dc72cd88a492f9c69b899b64e2feca726c9225627f7f",
+    "model_int8_pc.onnx": "6cc2d507343b6796ded5009fed74838a0ce677de530c576f4a49184f636ee938"
+  },
+  "calibration_source": "train split only",
+  "dataset_manifest_sha256": "9482838c262f58f5a0e408e66c4ce72c968bbc344db86cc96017e103527fbe16",
+  "icraft_input": "model_fp32_batch1.onnx",
+  "pc_comparison_only": "model_int8_pc.onnx",
+  "note": "Icraft import, board quantization, compilation and runtime must be tested with the installed SDK."
+}

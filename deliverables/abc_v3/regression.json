@@ -1,0 +1,25 @@
+{
+  "unit_tests": {
+    "total": 66,
+    "passed": 64,
+    "skipped": 2,
+    "failures": 0,
+    "skip_reason": "pymavlink is not installed; two optional flight-controller wire tests"
+  },
+  "cli_trace_and_event_hashes": {
+    "a": {
+      "trace.csv": "a606e8ed1a6cdc60b296ee816850db6a95f965768688e2883cfad7b163672748",
+      "events.jsonl": "86de50bee4fab24966444eb0316c3394b7c4691eba5942ca3253b19e84b18820"
+    },
+    "b": {
+      "trace.csv": "a606e8ed1a6cdc60b296ee816850db6a95f965768688e2883cfad7b163672748",
+      "events.jsonl": "86de50bee4fab24966444eb0316c3394b7c4691eba5942ca3253b19e84b18820"
+    },
+    "c": {
+      "trace.csv": "a606e8ed1a6cdc60b296ee816850db6a95f965768688e2883cfad7b163672748",
+      "events.jsonl": "86de50bee4fab24966444eb0316c3394b7c4691eba5942ca3253b19e84b18820"
+    }
+  },
+  "cli_exact_match": true,
+  "historical_model_rejected": "Model simulation contract differs; regenerate data/train/export under warehouse-abc-v3"
+}

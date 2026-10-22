@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-10-06T21:07:33+08:00",
+  "checks": {
+    "dataset_voyages_at_least_5000": true,
+    "evaluation_voyages_at_least_200": true,
+    "cpu_latency_repetitions_at_least_1000": true,
+    "parameters_under_100000": true,
+    "quantization_recall_drop_at_most_2pp": true,
+    "significantly_fewer_outages": true,
+    "switch_growth_at_most_50_percent": true
+  },
+  "all_pass": true,
+  "ideal_zero_outages": true
+}

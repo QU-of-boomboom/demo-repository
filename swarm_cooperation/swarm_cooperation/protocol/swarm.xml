@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<mavlink>
+  <version>3</version>
+  <messages>
+    <message id="60000" name="SWARM_HEARTBEAT">
+      <description>集群应用心跳，不替代飞控标准 HEARTBEAT。</description>
+      <field type="uint32_t" name="session_id">进程启动会话号</field>
+      <field type="uint32_t" name="seq">应用序列号</field>
+      <field type="uint32_t" name="time_boot_ms" units="ms">启动后单调时间</field>
+      <field type="uint8_t" name="role">0地面站 1主机 2中继</field>
+      <field type="uint8_t" name="state">角色状态枚举，见协议文档</field>
+      <field type="uint8_t" name="ready">中继位置及上游连通性确认</field>
+    </message>
+    <message id="60001" name="SWARM_POSITION">
+      <description>统一仓库 ENU 坐标的位置遥测。</description>
+      <field type="uint32_t" name="session_id">进程启动会话号</field>
+      <field type="uint32_t" name="seq">应用序列号</field>
+      <field type="uint32_t" name="time_boot_ms" units="ms">采样时刻</field>
+      <field type="float" name="x" units="m">向东</field>
+      <field type="float" name="y" units="m">向北</field>
+      <field type="float" name="z" units="m">向上</field>
+      <field type="float" name="vx" units="m/s">向东速度</field>
+      <field type="float" name="vy" units="m/s">向北速度</field>
+      <field type="float" name="vz" units="m/s">向上速度</field>
+    </message>
+    <message id="60002" name="SWARM_RSSI">
+      <description>接收节点对相邻发送节点的单向链路测量。</description>
+      <field type="uint32_t" name="session_id">进程启动会话号</field>
+      <field type="uint32_t" name="seq">应用序列号</field>
+      <field type="uint32_t" name="time_boot_ms" units="ms">发送时刻</field>
+      <field type="uint8_t" name="peer_system">被测发送节点系统号</field>
+      <field type="int16_t" name="rssi_cdbm">RSSI 乘100，-32768表示无效</field>
+      <field type="uint16_t" name="sample_age_ms" units="ms">测量到发送的年龄</field>
+    </message>
+    <message id="60003" name="RELAY_ASSIGN">
+      <description>中继准备、提交或释放；ACK仅表示接收，不代表到达悬停位。</description>
+      <field type="uint32_t" name="session_id">进程启动会话号</field>
+      <field type="uint32_t" name="seq">事务序列号，重传保持不变</field>
+      <field type="uint32_t" name="time_boot_ms" units="ms">首次发送时刻</field>
+      <field type="uint8_t" name="target_system">目标系统</field>
+      <field type="uint8_t" name="target_component">目标组件</field>
+      <field type="uint32_t" name="route_epoch">路由版本，三阶段必须一致</field>
+      <field type="uint8_t" name="operation">1准备 2提交 3释放</field>
+      <field type="uint8_t" name="upstream_system">上游系统</field>
+      <field type="uint8_t" name="downstream_system">下游系统</field>
+      <field type="float" name="x" units="m">悬停位置向东</field>
+      <field type="float" name="y" units="m">悬停位置向北</field>
+      <field type="float" name="z" units="m">悬停高度向上</field>
+    </message>
+    <message id="60004" name="PICK_CONFIRM">
+      <description>夹爪传感器确认的取货结果。</description>
+      <field type="uint32_t" name="session_id">进程启动会话号</field>
+      <field type="uint32_t" name="seq">事件序列号</field>
+      <field type="uint32_t" name="time_boot_ms" units="ms">事件时刻</field>
+      <field type="uint8_t" name="target_system">地面站系统</field>
+      <field type="uint8_t" name="target_component">地面站组件</field>
+      <field type="uint32_t" name="task_id">任务号</field>
+      <field type="uint16_t" name="shelf_id">货架号</field>
+      <field type="uint8_t" name="result">0成功 1失败</field>
+    </message>
+    <message id="60005" name="SWARM_FAILSAFE">
+      <description>异常状态广播，接收者不得将其直接当作全体返航命令。</description>
+      <field type="uint32_t" name="session_id">进程启动会话号</field>
+      <field type="uint32_t" name="seq">事件序列号，重复广播保持一致</field>
+      <field type="uint32_t" name="time_boot_ms" units="ms">异常首次发生时刻</field>
+      <field type="uint8_t" name="target_system">0表示广播</field>
+      <field type="uint8_t" name="target_component">0表示广播</field>
+      <field type="uint8_t" name="reason">1链路弱 2心跳丢失 3遥测陈旧</field>
+      <field type="uint8_t" name="action">1悬停 2原路返航 3已恢复</field>
+      <field type="int16_t" name="rssi_cdbm">RSSI乘100，-32768表示无效</field>
+      <field type="uint16_t" name="hold_ms" units="ms">悬停窗口</field>
+    </message>
+    <message id="60006" name="SWARM_ACK">
+      <description>应用可靠消息确认，完整匹配发送者、会话、消息号及事务号。</description>
+      <field type="uint32_t" name="session_id">ACK发送方会话号</field>
+      <field type="uint32_t" name="seq">ACK发送方序列号</field>
+      <field type="uint32_t" name="time_boot_ms" units="ms">确认时刻</field>
+      <field type="uint8_t" name="target_system">原发送者系统</field>
+      <field type="uint8_t" name="target_component">原发送者组件</field>
+      <field type="uint32_t" name="ack_session_id">原消息会话号</field>
+      <field type="uint32_t" name="ack_seq">原消息事务序列号</field>
+      <field type="uint32_t" name="ack_message_id">原消息 ID</field>
+      <field type="uint8_t" name="result">0应用已接收 1拒绝</field>
+    </message>
+  </messages>
+</mavlink>

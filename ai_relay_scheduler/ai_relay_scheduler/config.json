@@ -1,0 +1,40 @@
+{
+  "seed": 20261020,
+  "data_seed": 120000,
+  "evaluation_seed": 920000,
+  "data_source": "simulation",
+  "telemetry_jsonl": "",
+  "feature_spec": {
+    "schema_version": "relay-link-v2",
+    "history_steps": 20,
+    "dt_s": 0.1,
+    "horizons_s": [
+      1.5,
+      6.0
+    ],
+    "weak_dbm": -75.0,
+    "max_age_s": 0.5,
+    "coordinate_scale_m": 10.0
+  },
+  "voyages": 24,
+  "simulation_rounds": 2,
+  "randomize_stations": true,
+  "map_observation": "static",
+  "sample_stride": 5,
+  "train_fraction": 0.7,
+  "validation_fraction": 0.15,
+  "hidden_sizes": [
+    64,
+    32
+  ],
+  "epochs": 16,
+  "batch_size": 1024,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "target_validation_recall": 0.95,
+  "cpu_threads": 2,
+  "evaluation_voyages": 6,
+  "latency_repeats": 500,
+  "recall_drop_limit_pp": 2.0,
+  "output_dir": "outputs_v2/template"
+}

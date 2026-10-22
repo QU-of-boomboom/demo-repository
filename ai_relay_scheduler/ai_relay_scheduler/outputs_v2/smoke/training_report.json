@@ -1,0 +1,159 @@
+{
+  "schema_version": "relay-link-v2",
+  "data_source": "simulation",
+  "status": "synthetic_pipeline_test",
+  "npu_validated": false,
+  "parameter_count": 8354,
+  "selected_epoch": 3,
+  "thresholds": [
+    0.43,
+    0.485
+  ],
+  "validation": [
+    {
+      "samples": 210,
+      "positives": 37,
+      "tp": 37,
+      "fp": 173,
+      "fn": 0,
+      "recall": 1.0,
+      "precision": 0.1761904761904762,
+      "accuracy": 0.1761904761904762,
+      "brier": 0.21143832089656497,
+      "threshold": 0.43
+    },
+    {
+      "samples": 156,
+      "positives": 42,
+      "tp": 42,
+      "fp": 113,
+      "fn": 0,
+      "recall": 1.0,
+      "precision": 0.2709677419354839,
+      "accuracy": 0.27564102564102566,
+      "brier": 0.2438221513984144,
+      "threshold": 0.485
+    }
+  ],
+  "test": [
+    {
+      "samples": 174,
+      "positives": 92,
+      "tp": 92,
+      "fp": 82,
+      "fn": 0,
+      "recall": 1.0,
+      "precision": 0.5287356321839081,
+      "accuracy": 0.5287356321839081,
+      "brier": 0.2402684550926773,
+      "threshold": 0.43
+    },
+    {
+      "samples": 114,
+      "positives": 74,
+      "tp": 74,
+      "fp": 40,
+      "fn": 0,
+      "recall": 1.0,
+      "precision": 0.6491228070175439,
+      "accuracy": 0.6491228070175439,
+      "brier": 0.24323385489377533,
+      "threshold": 0.485
+    }
+  ],
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.6955261718359688,
+      "validation": [
+        {
+          "samples": 210,
+          "positives": 37,
+          "tp": 37,
+          "fp": 173,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 0.1761904761904762,
+          "accuracy": 0.1761904761904762,
+          "brier": 0.2389689747675038,
+          "threshold": 0.465
+        },
+        {
+          "samples": 156,
+          "positives": 42,
+          "tp": 42,
+          "fp": 114,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 0.2692307692307692,
+          "accuracy": 0.2692307692307692,
+          "brier": 0.24749996960190102,
+          "threshold": 0.485
+        }
+      ]
+    },
+    {
+      "epoch": 2,
+      "loss": 0.6822062125690073,
+      "validation": [
+        {
+          "samples": 210,
+          "positives": 37,
+          "tp": 37,
+          "fp": 173,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 0.1761904761904762,
+          "accuracy": 0.1761904761904762,
+          "brier": 0.22561444657996294,
+          "threshold": 0.45
+        },
+        {
+          "samples": 156,
+          "positives": 42,
+          "tp": 42,
+          "fp": 114,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 0.2692307692307692,
+          "accuracy": 0.2692307692307692,
+          "brier": 0.24556582324297893,
+          "threshold": 0.485
+        }
+      ]
+    },
+    {
+      "epoch": 3,
+      "loss": 0.6703672340447954,
+      "validation": [
+        {
+          "samples": 210,
+          "positives": 37,
+          "tp": 37,
+          "fp": 173,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 0.1761904761904762,
+          "accuracy": 0.1761904761904762,
+          "brier": 0.21143832089656497,
+          "threshold": 0.43
+        },
+        {
+          "samples": 156,
+          "positives": 42,
+          "tp": 42,
+          "fp": 113,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 0.2709677419354839,
+          "accuracy": 0.27564102564102566,
+          "brier": 0.2438221513984144,
+          "threshold": 0.485
+        }
+      ]
+    }
+  ],
+  "training_seconds": 0.2500122999990708,
+  "torch_version": "2.14.1+cpu",
+  "model_sha256": "b26c2a164ce94aae74281d8da12fcf8681ca1d5b59a1462623751397214bb34f"
+}

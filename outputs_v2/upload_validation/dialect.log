@@ -1,0 +1,12 @@
+Validating .\swarm_cooperation\swarm_cooperation\protocol\swarm.xml
+Parsing .\swarm_cooperation\swarm_cooperation\protocol\swarm.xml
+Found 7 MAVLink message types in 1 XML files
+Generating .\swarm_cooperation\swarm_cooperation\generated\swarm.py
+Generating preamble
+Generating enums
+Generating message IDs
+Generating class definitions
+Generating MAVLink class
+Generating methods
+Generated .\swarm_cooperation\swarm_cooperation\generated\swarm.py OK
+已生成 generated/swarm.py（MAVLink 2）

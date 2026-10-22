@@ -1,0 +1,51 @@
+test_mission_contains_takeoff_pick_reverse_land (test_core.MissionTests.test_mission_contains_takeoff_pick_reverse_land) ... ok
+test_old_request_gets_old_item (test_core.MissionTests.test_old_request_gets_old_item) ... ok
+test_request_bounds_rejection_wrong_destination (test_core.MissionTests.test_request_bounds_rejection_wrong_destination) ... ok
+test_request_order_duplicates_ack_and_int_units (test_core.MissionTests.test_request_order_duplicates_ack_and_int_units) ... ok
+test_upload_timeout_is_bounded (test_core.MissionTests.test_upload_timeout_is_bounded) ... ok
+test_xml_ids_and_names (test_core.MissionTests.test_xml_ids_and_names) ... ok
+test_complete_normal_mission (test_core.StateMachineTests.test_complete_normal_mission) ... ok
+test_disconnect_threshold_strict_and_recovery_hysteresis (test_core.StateMachineTests.test_disconnect_threshold_strict_and_recovery_hysteresis) ... ok
+test_every_active_state_enters_failsafe (test_core.StateMachineTests.test_every_active_state_enters_failsafe) ... ok
+test_first_terminal_visit_does_not_end_survey (test_core.StateMachineTests.test_first_terminal_visit_does_not_end_survey) ... ok
+test_geometry_and_model (test_core.StateMachineTests.test_geometry_and_model) ... ok
+test_persistent_fault_holds_five_seconds_then_returns_once (test_core.StateMachineTests.test_persistent_fault_holds_five_seconds_then_returns_once) ... ok
+test_route_uses_weakest_hop (test_core.StateMachineTests.test_route_uses_weakest_hop) ... ok
+test_transient_fault_holds_position_and_preserves_pick_timer (test_core.StateMachineTests.test_transient_fault_holds_position_and_preserves_pick_timer) ... ok
+test_artifacts_and_gazebo_world (test_ideal.IdealExperimentTests.test_artifacts_and_gazebo_world) ... ok
+test_changes_are_observed_before_second_forward_plan (test_ideal.IdealExperimentTests.test_changes_are_observed_before_second_forward_plan) ... ok
+test_config_rejects_invalid_window (test_ideal.IdealExperimentTests.test_config_rejects_invalid_window) ... ok
+test_each_return_retraces_full_outbound (test_ideal.IdealExperimentTests.test_each_return_retraces_full_outbound) ... ok
+test_five_complete_rounds_and_preflight_graph (test_ideal.IdealExperimentTests.test_five_complete_rounds_and_preflight_graph) ... ok
+test_manual_idempotency_and_wrong_payload (test_ideal.IdealExperimentTests.test_manual_idempotency_and_wrong_payload) ... ok
+test_missed_window_is_not_faked_as_success (test_ideal.IdealExperimentTests.test_missed_window_is_not_faked_as_success) ... ok
+test_model_invalid_output_falls_back_and_reliability_constraint_holds (test_ideal.IdealExperimentTests.test_model_invalid_output_falls_back_and_reliability_constraint_holds) ... ok
+test_random_change_is_two_to_four_during_first_return (test_ideal.IdealExperimentTests.test_random_change_is_two_to_four_during_first_return) ... ok
+test_removed_box_reduces_physical_attenuation (test_ideal.IdealExperimentTests.test_removed_box_reduces_physical_attenuation) ... ok
+test_same_scene_comparison_and_candidate_export (test_ideal.IdealExperimentTests.test_same_scene_comparison_and_candidate_export) ... ok
+test_window_boundaries_validation_and_observation_separation (test_ideal.IdealExperimentTests.test_window_boundaries_validation_and_observation_separation) ... ok
+test_guided_position_frame_signature (test_mavlink_optional.ArduPilotWireTests.test_guided_position_frame_signature) ... ok
+test_real_mission_count_and_item_int (test_mavlink_optional.ArduPilotWireTests.test_real_mission_count_and_item_int) ... ok
+test_lost_ack_retransmission_is_idempotent (test_mavlink_optional.WireTests.test_lost_ack_retransmission_is_idempotent) ... ok
+test_retry_exhaustion (test_mavlink_optional.WireTests.test_retry_exhaustion) ... ok
+test_seven_message_types_roundtrip (test_mavlink_optional.WireTests.test_seven_message_types_roundtrip) ... ok
+test_wrong_peer_ack_does_not_commit (test_mavlink_optional.WireTests.test_wrong_peer_ack_does_not_commit) ... ok
+test_each_physical_link_uses_its_own_window_and_direction (test_prediction_contract.FeatureContractTests.test_each_physical_link_uses_its_own_window_and_direction) ... ok
+test_gaps_insert_missing_slots_and_duplicates_fail (test_prediction_contract.FeatureContractTests.test_gaps_insert_missing_slots_and_duplicates_fail) ... ok
+test_missing_stale_nonfinite_and_future_samples_are_invalid (test_prediction_contract.FeatureContractTests.test_missing_stale_nonfinite_and_future_samples_are_invalid) ... ok
+test_snapshot_copy_does_not_depend_on_truth_or_future (test_prediction_contract.FeatureContractTests.test_snapshot_copy_does_not_depend_on_truth_or_future) ... ok
+test_active_relays_never_move_without_handover (test_prediction_contract.IntegrationContractTests.test_active_relays_never_move_without_handover) ... ok
+test_model_error_falls_back_and_never_marks_stale_as_good (test_prediction_contract.IntegrationContractTests.test_model_error_falls_back_and_never_marks_stale_as_good) ... ok
+test_persistent_missing_telemetry_holds_then_returns_onboard (test_prediction_contract.IntegrationContractTests.test_persistent_missing_telemetry_holds_then_returns_onboard) ... ok
+test_scheduler_rejects_removing_only_working_upstream (test_prediction_contract.IntegrationContractTests.test_scheduler_rejects_removing_only_working_upstream) ... ok
+test_static_map_does_not_observe_removed_boxes (test_prediction_contract.IntegrationContractTests.test_static_map_does_not_observe_removed_boxes) ... ok
+test_failed_or_missing_backbone_prevents_activation (test_prediction_contract.RouteTransactionTests.test_failed_or_missing_backbone_prevents_activation) ... ok
+test_failure_overrides_dwell_and_unready_candidate_is_rejected (test_prediction_contract.RouteTransactionTests.test_failure_overrides_dwell_and_unready_candidate_is_rejected) ... ok
+test_prediction_can_switch_before_current_rssi_is_weak (test_prediction_contract.RouteTransactionTests.test_prediction_can_switch_before_current_rssi_is_weak) ... ok
+test_prepare_commit_wrong_ack_and_confirm_preserve_old_route (test_prediction_contract.RouteTransactionTests.test_prepare_commit_wrong_ack_and_confirm_preserve_old_route) ... ok
+test_timeout_never_releases_old_path (test_prediction_contract.RouteTransactionTests.test_timeout_never_releases_old_path) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 31.237s
+
+OK

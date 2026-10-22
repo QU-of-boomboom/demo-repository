@@ -1,0 +1,47 @@
+# Local environments, caches and generated build output
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+.acl-repair/
+build/
+install/
+log/
+logs/
+*.egg-info/
+.DS_Store
+Thumbs.db
+
+# Local credentials and editor configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.idea/
+.vscode/
+
+# Training datasets and new experiment output
+*.npz
+*.npy
+**/outputs_v2/template/
+**/outputs_v3/
+**/outputs*/**/trace.csv
+**/outputs*/**/decisions.jsonl
+**/outputs*/**/events.jsonl
+**/outputs*/**/telemetry_simulation.jsonl
+**/outputs*/**/replay.html
+!outputs_v2/p0_cars/demo/replay.html
+
+# Archives and unrelated local calibration materials
+*.zip
+*.zip.sha256
+**/*[Kk]alibr*/
+**/*[Kk]alibr*
+**/*VIO*标定*
+deliverables/github_repository/
+
+# These nine small historical weight fixtures remain tracked for check_dod.py.
+# Do not add newly trained weights here; use outputs_v2/template/.

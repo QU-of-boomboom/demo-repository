@@ -1,0 +1,287 @@
+{
+  "stage": "simulation comparison; not real flight or NPU validation",
+  "model_data_source": "simulation",
+  "evaluation_seed": 920000,
+  "disturbance_contract": "same seed, radio parameters and mission-relative removal rule; links recomputed at policy-specific positions and times",
+  "caution": "Aborted runs are failures; shorter outage on an aborted run is not an improvement.",
+  "rows": [
+    {
+      "success": true,
+      "failure_reason": null,
+      "completed_rounds": 2,
+      "main_distance_m": 92.0,
+      "relay_distance_m": 8.0,
+      "all_phase_outage_s": 4.8,
+      "longest_outage_s": 2.3,
+      "outage_events": 7,
+      "total_switches": 47,
+      "deployment_count": 4,
+      "deployment_successes": 4,
+      "total_time_s": 114.6,
+      "inference_calls": 0,
+      "inference_fallbacks": 0,
+      "planning_timing": {
+        "count": 4,
+        "mean_ms": 140.1763500002744,
+        "p95_ms": 143.26020000044082,
+        "p99_ms": 143.26020000044082
+      },
+      "inference_cycle_timing": {
+        "count": 0,
+        "mean_ms": null,
+        "p95_ms": null,
+        "p99_ms": null
+      },
+      "relay_hop_s": 87.3,
+      "pingpong_count": 14,
+      "scenario": 0,
+      "strategy": "fixed",
+      "wall_seconds": 1.2670282999988558
+    },
+    {
+      "success": false,
+      "failure_reason": "link observations unavailable for failsafe hold interval",
+      "completed_rounds": 0,
+      "main_distance_m": 9.258127,
+      "relay_distance_m": 0.0,
+      "all_phase_outage_s": 6.4,
+      "longest_outage_s": 6.4,
+      "outage_events": 1,
+      "total_switches": 0,
+      "deployment_count": 1,
+      "deployment_successes": 0,
+      "total_time_s": 15.0,
+      "inference_calls": 0,
+      "inference_fallbacks": 0,
+      "planning_timing": {
+        "count": 1,
+        "mean_ms": 141.2266000006639,
+        "p95_ms": 141.2266000006639,
+        "p99_ms": 141.2266000006639
+      },
+      "inference_cycle_timing": {
+        "count": 0,
+        "mean_ms": null,
+        "p95_ms": null,
+        "p99_ms": null
+      },
+      "relay_hop_s": 0.0,
+      "pingpong_count": 0,
+      "scenario": 0,
+      "strategy": "reactive",
+      "wall_seconds": 0.1903056999999535
+    },
+    {
+      "success": true,
+      "failure_reason": null,
+      "completed_rounds": 2,
+      "main_distance_m": 92.0,
+      "relay_distance_m": 12.0,
+      "all_phase_outage_s": 3.1,
+      "longest_outage_s": 0.7,
+      "outage_events": 7,
+      "total_switches": 49,
+      "deployment_count": 4,
+      "deployment_successes": 4,
+      "total_time_s": 116.4,
+      "inference_calls": 0,
+      "inference_fallbacks": 0,
+      "planning_timing": {
+        "count": 13,
+        "mean_ms": 113.90336153845755,
+        "p95_ms": 197.006299998975,
+        "p99_ms": 197.006299998975
+      },
+      "inference_cycle_timing": {
+        "count": 0,
+        "mean_ms": null,
+        "p95_ms": null,
+        "p99_ms": null
+      },
+      "relay_hop_s": 89.1,
+      "pingpong_count": 16,
+      "scenario": 0,
+      "strategy": "predeploy",
+      "wall_seconds": 2.2348438999997597
+    },
+    {
+      "success": true,
+      "failure_reason": null,
+      "completed_rounds": 2,
+      "main_distance_m": 92.0,
+      "relay_distance_m": 12.0,
+      "all_phase_outage_s": 3.7,
+      "longest_outage_s": 0.7,
+      "outage_events": 9,
+      "total_switches": 47,
+      "deployment_count": 4,
+      "deployment_successes": 4,
+      "total_time_s": 116.4,
+      "inference_calls": 199,
+      "inference_fallbacks": 34,
+      "planning_timing": {
+        "count": 13,
+        "mean_ms": 119.54996923066993,
+        "p95_ms": 191.98269999833428,
+        "p99_ms": 191.98269999833428
+      },
+      "inference_cycle_timing": {
+        "count": 233,
+        "mean_ms": 1.141956223215775,
+        "p95_ms": 1.5853999993851176,
+        "p99_ms": 1.7631999999139225
+      },
+      "relay_hop_s": 92.2,
+      "pingpong_count": 13,
+      "scenario": 0,
+      "strategy": "predictive",
+      "wall_seconds": 4.096515499999441
+    },
+    {
+      "success": false,
+      "failure_reason": "link observations unavailable for failsafe hold interval",
+      "completed_rounds": 0,
+      "main_distance_m": 36.740406,
+      "relay_distance_m": 18.0,
+      "all_phase_outage_s": 7.8,
+      "longest_outage_s": 6.0,
+      "outage_events": 5,
+      "total_switches": 15,
+      "deployment_count": 1,
+      "deployment_successes": 1,
+      "total_time_s": 63.1,
+      "inference_calls": 0,
+      "inference_fallbacks": 0,
+      "planning_timing": {
+        "count": 1,
+        "mean_ms": 180.07140000008803,
+        "p95_ms": 180.07140000008803,
+        "p99_ms": 180.07140000008803
+      },
+      "inference_cycle_timing": {
+        "count": 0,
+        "mean_ms": null,
+        "p95_ms": null,
+        "p99_ms": null
+      },
+      "relay_hop_s": 38.7,
+      "pingpong_count": 3,
+      "scenario": 1,
+      "strategy": "fixed",
+      "wall_seconds": 0.4376248000007763
+    },
+    {
+      "success": false,
+      "failure_reason": "link observations unavailable for failsafe hold interval",
+      "completed_rounds": 0,
+      "main_distance_m": 8.730393,
+      "relay_distance_m": 0.0,
+      "all_phase_outage_s": 6.0,
+      "longest_outage_s": 6.0,
+      "outage_events": 1,
+      "total_switches": 0,
+      "deployment_count": 1,
+      "deployment_successes": 0,
+      "total_time_s": 14.8,
+      "inference_calls": 0,
+      "inference_fallbacks": 0,
+      "planning_timing": {
+        "count": 1,
+        "mean_ms": 147.11170000009588,
+        "p95_ms": 147.11170000009588,
+        "p99_ms": 147.11170000009588
+      },
+      "inference_cycle_timing": {
+        "count": 0,
+        "mean_ms": null,
+        "p95_ms": null,
+        "p99_ms": null
+      },
+      "relay_hop_s": 0.0,
+      "pingpong_count": 0,
+      "scenario": 1,
+      "strategy": "reactive",
+      "wall_seconds": 0.1969628000006196
+    },
+    {
+      "success": false,
+      "failure_reason": "link observations unavailable for failsafe hold interval",
+      "completed_rounds": 0,
+      "main_distance_m": 36.740406,
+      "relay_distance_m": 18.0,
+      "all_phase_outage_s": 7.8,
+      "longest_outage_s": 6.0,
+      "outage_events": 5,
+      "total_switches": 15,
+      "deployment_count": 1,
+      "deployment_successes": 1,
+      "total_time_s": 63.1,
+      "inference_calls": 0,
+      "inference_fallbacks": 0,
+      "planning_timing": {
+        "count": 1,
+        "mean_ms": 179.80229999920994,
+        "p95_ms": 179.80229999920994,
+        "p99_ms": 179.80229999920994
+      },
+      "inference_cycle_timing": {
+        "count": 0,
+        "mean_ms": null,
+        "p95_ms": null,
+        "p99_ms": null
+      },
+      "relay_hop_s": 38.7,
+      "pingpong_count": 3,
+      "scenario": 1,
+      "strategy": "predeploy",
+      "wall_seconds": 0.4350286999997479
+    },
+    {
+      "success": false,
+      "failure_reason": "link observations unavailable for failsafe hold interval",
+      "completed_rounds": 0,
+      "main_distance_m": 36.740406,
+      "relay_distance_m": 18.0,
+      "all_phase_outage_s": 7.8,
+      "longest_outage_s": 6.0,
+      "outage_events": 5,
+      "total_switches": 15,
+      "deployment_count": 1,
+      "deployment_successes": 1,
+      "total_time_s": 63.1,
+      "inference_calls": 99,
+      "inference_fallbacks": 28,
+      "planning_timing": {
+        "count": 1,
+        "mean_ms": 140.50440000028175,
+        "p95_ms": 140.50440000028175,
+        "p99_ms": 140.50440000028175
+      },
+      "inference_cycle_timing": {
+        "count": 127,
+        "mean_ms": 1.0757322834108454,
+        "p95_ms": 1.7088000004150672,
+        "p99_ms": 1.9885999990947312
+      },
+      "relay_hop_s": 38.7,
+      "pingpong_count": 3,
+      "scenario": 1,
+      "strategy": "predictive",
+      "wall_seconds": 1.9686894999995275
+    }
+  ],
+  "paired": [
+    {
+      "scenario": 0,
+      "predictive_minus_predeploy_outage_s": 0.6000000000000001,
+      "predictive_success": true,
+      "baseline_success": true
+    },
+    {
+      "scenario": 1,
+      "predictive_minus_predeploy_outage_s": 0.0,
+      "predictive_success": false,
+      "baseline_success": false
+    }
+  ]
+}

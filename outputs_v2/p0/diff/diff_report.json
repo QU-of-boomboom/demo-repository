@@ -1,0 +1,135 @@
+{
+  "contract_version": "warehouse-abc-v3",
+  "profile_version": "mission-profile-v1",
+  "profile_sha256": "1687015d91b7cb17a545312178ef4eea63fe5d44b806ba588ec11eb58a7ab40b",
+  "config": {
+    "rounds": 1,
+    "columns": 3,
+    "rows": 4,
+    "vehicle_kind": "relay_drone",
+    "cell_m": 1.0,
+    "dt_s": 0.1,
+    "main_speed_mps": 1.0,
+    "relay_speed_mps": 2.0,
+    "terminal_dwell_s": 1.0,
+    "home_dwell_s": 1.0,
+    "mode": "random",
+    "seed": 42,
+    "window_start_s": 2.0,
+    "window_end_s": 12.0,
+    "sensor_range_cells": 0.76,
+    "service_dbm": -75.0,
+    "disconnect_dbm": -88.0,
+    "shelf_loss_db": 12.0,
+    "p0_dbm": -40.0,
+    "path_loss_n": 2.2,
+    "planning_step_cells": 0.5,
+    "initial_stations": [
+      [
+        1.0,
+        2.0
+      ],
+      [
+        2.0,
+        4.0
+      ]
+    ],
+    "model_plugin": "",
+    "predictor_path": "",
+    "inference_timeout_s": 0.2,
+    "inference_period_s": 0.5,
+    "short_horizon_s": 1.5,
+    "deploy_horizon_s": 6.0,
+    "takeoff_s": 2.0,
+    "settle_s": 0.5,
+    "probe_s": 0.2,
+    "route_ack_s": 0.3,
+    "route_timeout_s": 2.0,
+    "min_dwell_s": 1.0,
+    "hysteresis_db": 3.0,
+    "reactive_on_slots": 3,
+    "deployment_timeout_s": 40.0,
+    "measurement_max_age_s": 0.5,
+    "measurement_delay_s": 0.1,
+    "measurement_drop_rate": 0.0,
+    "noise_sigma_db": 0.5,
+    "ack_drop_rate": 0.0,
+    "map_observation": "ideal",
+    "strategy": "predeploy",
+    "rolling_replan_s": 5.0,
+    "battery_reserve": 0.15,
+    "battery_per_m": 0.0005,
+    "battery_per_s": 5e-05,
+    "record_learning": false,
+    "failsafe_hold_s": 5.0
+  },
+  "modules": {
+    "A": {
+      "success": true,
+      "samples": 607,
+      "six_hop_rows": 3642,
+      "main_distance_m": 46.0,
+      "removed_cells": [
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    "B": {
+      "success": true,
+      "samples": 607,
+      "six_hop_rows": 3642,
+      "main_distance_m": 46.0,
+      "removed_cells": [
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    "C": {
+      "success": true,
+      "samples": 607,
+      "six_hop_rows": 3642,
+      "main_distance_m": 46.0,
+      "removed_cells": [
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    }
+  },
+  "passed": true,
+  "mismatch_count": {
+    "B": 0,
+    "C": 0
+  },
+  "first_mismatches": {
+    "B": [],
+    "C": []
+  },
+  "tolerance": 1e-09,
+  "links": [
+    "G-M",
+    "G-R1",
+    "G-R2",
+    "R1-M",
+    "R2-M",
+    "R1-R2"
+  ],
+  "note": "RSSI is deterministic pre-noise physical RSSI at actual moving positions. Column count is diagnostic; occupied cell count determines attenuation. Map removals applied at their event timestamps."
+}

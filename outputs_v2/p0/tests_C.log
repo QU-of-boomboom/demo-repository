@@ -1,0 +1,13 @@
+test_changed_plan_censors_future_labels (pipeline_v2.tests.DatasetTests.test_changed_plan_censors_future_labels) ... ok
+test_future_changes_labels_but_not_present_inputs (pipeline_v2.tests.DatasetTests.test_future_changes_labels_but_not_present_inputs) ... ok
+test_incomplete_long_horizon_is_masked (pipeline_v2.tests.DatasetTests.test_incomplete_long_horizon_is_masked) ... ok
+test_missing_future_real_measurements_are_not_negative_labels (pipeline_v2.tests.DatasetTests.test_missing_future_real_measurements_are_not_negative_labels) ... ok
+test_missing_real_link_and_timestamp_are_unknown_labels (pipeline_v2.tests.DatasetTests.test_missing_real_link_and_timestamp_are_unknown_labels) ... ok
+test_nan_future_synthetic_label_is_masked_not_good (pipeline_v2.tests.DatasetTests.test_nan_future_synthetic_label_is_masked_not_good) ... ok
+test_new_model_shape_is_two_horizons_not_action_commands (pipeline_v2.tests.DatasetTests.test_new_model_shape_is_two_horizons_not_action_commands) ... ok
+test_real_import_refuses_synthetic_truth_and_mixed_groups (pipeline_v2.tests.DatasetTests.test_real_import_refuses_synthetic_truth_and_mixed_groups) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.530s
+
+OK

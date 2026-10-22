@@ -1,0 +1,62 @@
+{
+  "stage": "Icraft上板前的PC端仿真验证，非NPU实测",
+  "threshold": 0.53,
+  "model_weights_sha256": "742a56f434a97a35c364e50834af20f1a1fa20d04255f5cc4d0c24491aa9653e",
+  "environment": {
+    "python": "3.11.7",
+    "platform": "Windows-10-10.0.22631-SP0",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.20.1",
+    "torch": "2.8.0+cpu",
+    "threads": 1,
+    "provider": "CPUExecutionProvider"
+  },
+  "quantized_linear_layers": 3,
+  "onnx_export_max_abs_error": 7.62939453125e-06,
+  "rows": {
+    "FP32": {
+      "accuracy": 0.9772276280871207,
+      "recall": 0.9910031189926153,
+      "precision": 0.9675679768929949,
+      "f2": 0.9862257100231887,
+      "tp": 178883,
+      "tn": 148113,
+      "fp": 5996,
+      "fn": 1624,
+      "threshold": 0.53,
+      "samples": 334616,
+      "size_bytes": 15925,
+      "latency": {
+        "mean_ms": 0.010261900000000001,
+        "p50_ms": 0.0091,
+        "p95_ms": 0.011904999999999995,
+        "repetitions": 1000
+      },
+      "sha256": "79c7020b70e04ca19104f7582f2c80d35ad9defa7603b34be14c40a1a858d5d7"
+    },
+    "INT8": {
+      "accuracy": 0.9764655605231071,
+      "recall": 0.9914961746635864,
+      "precision": 0.9657874287687791,
+      "f2": 0.9862455088500451,
+      "tp": 178972,
+      "tn": 147769,
+      "fp": 6340,
+      "fn": 1535,
+      "threshold": 0.53,
+      "samples": 334616,
+      "size_bytes": 8629,
+      "latency": {
+        "mean_ms": 0.016292700000000004,
+        "p50_ms": 0.0143,
+        "p95_ms": 0.019104999999999994,
+        "repetitions": 1000
+      },
+      "sha256": "a6a2ea52bc63e534076848c1b8a91eb1c6493aedc3511996695bb049317f4f26"
+    }
+  },
+  "recall_drop_pp": -0.0493055670971132,
+  "quantization_pass": true,
+  "prediction_disagreement_fraction": 0.001413560618739092
+}

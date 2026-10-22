@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "steps": {
+    "dialect": {
+      "passed": true,
+      "returncode": 0,
+      "log": "dialect.log"
+    },
+    "p0": {
+      "passed": true,
+      "returncode": 0,
+      "log": "p0.log"
+    },
+    "ground_car": {
+      "passed": true,
+      "returncode": 0,
+      "log": "ground_car.log"
+    }
+  },
+  "python": "3.13.13",
+  "platform": "win32",
+  "checked_at_utc": "2026-10-21T14:52:10.603535+00:00",
+  "p0_tests": 101,
+  "p0_skipped": 0
+}

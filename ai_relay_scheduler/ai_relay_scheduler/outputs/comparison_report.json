@@ -1,0 +1,74 @@
+{
+  "rule": {
+    "outage_events": 20,
+    "outage_samples": 31,
+    "outage_seconds": 3.1000000000000005,
+    "switches": 1080,
+    "switch_requests": 1080,
+    "pingpong": 511,
+    "samples": 92412,
+    "relay_samples": 44135,
+    "mean_margin_db": 28.207981040186283,
+    "relay_fraction": 0.47758949054235383
+  },
+  "ai": {
+    "outage_events": 0,
+    "outage_samples": 0,
+    "outage_seconds": 0.0,
+    "switches": 811,
+    "switch_requests": 811,
+    "pingpong": 282,
+    "samples": 92412,
+    "relay_samples": 49562,
+    "mean_margin_db": 29.06386305026394,
+    "relay_fraction": 0.5363156300047612
+  },
+  "rule_zero_delay": {
+    "outage_events": 0,
+    "outage_samples": 0,
+    "outage_seconds": 0.0,
+    "switches": 1487,
+    "switch_requests": 1487,
+    "pingpong": 908,
+    "samples": 92412,
+    "relay_samples": 44352,
+    "mean_margin_db": 28.464220605832217,
+    "relay_fraction": 0.47993767043241137
+  },
+  "ai_zero_delay": {
+    "outage_events": 0,
+    "outage_samples": 0,
+    "outage_seconds": 0.0,
+    "switches": 954,
+    "switch_requests": 954,
+    "pingpong": 423,
+    "samples": 92412,
+    "relay_samples": 49504,
+    "mean_margin_db": 29.106482986769432,
+    "relay_fraction": 0.5356880058866814
+  },
+  "threshold": 0.53,
+  "evaluation_seed": 91006,
+  "voyages": 200,
+  "handover_delay_s": 0.5,
+  "deployed_model": "model_int8.onnx",
+  "statistics": {
+    "mean_outage_event_difference": -0.1,
+    "paired_bootstrap_95_ci": [
+      -0.155,
+      -0.05
+    ],
+    "one_sided_sign_test_p": 3.0517578125e-05,
+    "ai_better_voyages": 15,
+    "ai_worse_voyages": 0,
+    "tied_voyages": 185,
+    "bootstrap_repeats": 5000
+  },
+  "switch_growth": -0.24907407407407411,
+  "outage_reduction_fraction": 1.0,
+  "acceptance": {
+    "significantly_fewer_outages": true,
+    "switch_growth_at_most_50_percent": true,
+    "ideal_zero_outages": true
+  }
+}

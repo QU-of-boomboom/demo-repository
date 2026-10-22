@@ -1,0 +1,9 @@
+{
+  "pass_all": true,
+  "voyages": 5000,
+  "samples": 2235101,
+  "evaluation_rows": 800,
+  "split_disjoint": true,
+  "reconstructed_voyages_match": true,
+  "model_hashes_match": true
+}

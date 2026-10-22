@@ -1,0 +1,311 @@
+{
+  "passed": true,
+  "tests_run": 21,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "scenario": {
+    "rounds": 1,
+    "columns": 3,
+    "rows": 4,
+    "cell_m": 1.0,
+    "dt_s": 0.1,
+    "main_speed_mps": 1.0,
+    "relay_speed_mps": 2.0,
+    "terminal_dwell_s": 1.0,
+    "home_dwell_s": 1.0,
+    "mode": "none",
+    "seed": 42,
+    "window_start_s": 2.0,
+    "window_end_s": 12.0,
+    "sensor_range_cells": 0.76,
+    "service_dbm": -75.0,
+    "disconnect_dbm": -88.0,
+    "shelf_loss_db": 12.0,
+    "p0_dbm": -40.0,
+    "path_loss_n": 2.2,
+    "planning_step_cells": 0.5,
+    "initial_stations": [
+      [
+        1.0,
+        2.0
+      ],
+      [
+        2.0,
+        4.0
+      ]
+    ],
+    "model_plugin": "",
+    "predictor_path": "",
+    "inference_timeout_s": 0.2,
+    "inference_period_s": 0.5,
+    "short_horizon_s": 1.5,
+    "deploy_horizon_s": 6.0,
+    "takeoff_s": 2.0,
+    "settle_s": 0.5,
+    "probe_s": 0.2,
+    "route_ack_s": 0.3,
+    "route_timeout_s": 2.0,
+    "min_dwell_s": 1.0,
+    "hysteresis_db": 3.0,
+    "reactive_on_slots": 3,
+    "deployment_timeout_s": 40.0,
+    "measurement_max_age_s": 0.5,
+    "measurement_delay_s": 0.1,
+    "measurement_drop_rate": 0.0,
+    "noise_sigma_db": 0.5,
+    "ack_drop_rate": 0.0,
+    "map_observation": "ideal",
+    "strategy": "predeploy",
+    "rolling_replan_s": 5.0,
+    "battery_reserve": 0.15,
+    "battery_per_m": 0.0005,
+    "battery_per_s": 5e-05,
+    "record_learning": false,
+    "failsafe_hold_s": 5.0
+  },
+  "modules": {
+    "A": {
+      "success": true,
+      "contract": {
+        "version": "warehouse-abc-v3",
+        "profile_version": "mission-profile-v1",
+        "profile_sha256": "8bce3c6a1e45b3f47ec21a15e22126d96d08acaaab3a0302516ecc45e93e773d",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "outward_route": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            4.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            2.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ]
+        ],
+        "single_leg_m": 23.0,
+        "coordinates": "grid; multiply by cell_m for metres",
+        "progress": "distance from current leg start; reset only at leg change; frozen during waits",
+        "segment": "zero-based segment in direction-specific route; vertex belongs to incoming segment",
+        "time": "seconds since run start, monotonic; post-step samples; sample_time_s is acquisition time",
+        "dwell": "at terminal after outbound and home after return, including final round",
+        "radio": {
+          "p0_dbm": -40.0,
+          "path_loss_n": 2.2,
+          "shelf_loss_db": 12.0,
+          "reference_distance_m": 1.0,
+          "gain_db": 0.0,
+          "occlusion": "each occupied cell open interior once; boundaries/corners excluded",
+          "topology": "six symmetric physical links; five simple paths; weakest hop; no gain"
+        }
+      },
+      "trace_sha256": "b352bdf872b91d21bc22304fce5133325a3c23b64c089a2d23b179e8b3210c30",
+      "event_sha256": "bbaa7bb43bb47c172ccd77f839c2782b01d8f0e85bc1420ff5e0caaf0cd2e89c",
+      "sample_count": 607,
+      "distance_m": 46.0,
+      "total_time_s": 60.7,
+      "phase_time_s": {
+        "DEPLOY": 8.4,
+        "DWELL": 2.0,
+        "FLY": 46.0,
+        "LINK_HOLD": 0.2,
+        "RECOVER": 4.1
+      }
+    },
+    "B": {
+      "success": true,
+      "contract": {
+        "version": "warehouse-abc-v3",
+        "profile_version": "mission-profile-v1",
+        "profile_sha256": "8bce3c6a1e45b3f47ec21a15e22126d96d08acaaab3a0302516ecc45e93e773d",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "outward_route": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            4.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            2.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ]
+        ],
+        "single_leg_m": 23.0,
+        "coordinates": "grid; multiply by cell_m for metres",
+        "progress": "distance from current leg start; reset only at leg change; frozen during waits",
+        "segment": "zero-based segment in direction-specific route; vertex belongs to incoming segment",
+        "time": "seconds since run start, monotonic; post-step samples; sample_time_s is acquisition time",
+        "dwell": "at terminal after outbound and home after return, including final round",
+        "radio": {
+          "p0_dbm": -40.0,
+          "path_loss_n": 2.2,
+          "shelf_loss_db": 12.0,
+          "reference_distance_m": 1.0,
+          "gain_db": 0.0,
+          "occlusion": "each occupied cell open interior once; boundaries/corners excluded",
+          "topology": "six symmetric physical links; five simple paths; weakest hop; no gain"
+        }
+      },
+      "trace_sha256": "b352bdf872b91d21bc22304fce5133325a3c23b64c089a2d23b179e8b3210c30",
+      "event_sha256": "bbaa7bb43bb47c172ccd77f839c2782b01d8f0e85bc1420ff5e0caaf0cd2e89c",
+      "sample_count": 607,
+      "distance_m": 46.0,
+      "total_time_s": 60.7,
+      "phase_time_s": {
+        "DEPLOY": 8.4,
+        "DWELL": 2.0,
+        "FLY": 46.0,
+        "LINK_HOLD": 0.2,
+        "RECOVER": 4.1
+      }
+    },
+    "C": {
+      "success": true,
+      "contract": {
+        "version": "warehouse-abc-v3",
+        "profile_version": "mission-profile-v1",
+        "profile_sha256": "8bce3c6a1e45b3f47ec21a15e22126d96d08acaaab3a0302516ecc45e93e773d",
+        "cell_m": 1.0,
+        "dt_s": 0.1,
+        "terminal_dwell_s": 1.0,
+        "home_dwell_s": 1.0,
+        "outward_route": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            4.0
+          ],
+          [
+            1.0,
+            0.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            2.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ]
+        ],
+        "single_leg_m": 23.0,
+        "coordinates": "grid; multiply by cell_m for metres",
+        "progress": "distance from current leg start; reset only at leg change; frozen during waits",
+        "segment": "zero-based segment in direction-specific route; vertex belongs to incoming segment",
+        "time": "seconds since run start, monotonic; post-step samples; sample_time_s is acquisition time",
+        "dwell": "at terminal after outbound and home after return, including final round",
+        "radio": {
+          "p0_dbm": -40.0,
+          "path_loss_n": 2.2,
+          "shelf_loss_db": 12.0,
+          "reference_distance_m": 1.0,
+          "gain_db": 0.0,
+          "occlusion": "each occupied cell open interior once; boundaries/corners excluded",
+          "topology": "six symmetric physical links; five simple paths; weakest hop; no gain"
+        }
+      },
+      "trace_sha256": "b352bdf872b91d21bc22304fce5133325a3c23b64c089a2d23b179e8b3210c30",
+      "event_sha256": "bbaa7bb43bb47c172ccd77f839c2782b01d8f0e85bc1420ff5e0caaf0cd2e89c",
+      "sample_count": 607,
+      "distance_m": 46.0,
+      "total_time_s": 60.7,
+      "phase_time_s": {
+        "DEPLOY": 8.4,
+        "DWELL": 2.0,
+        "FLY": 46.0,
+        "LINK_HOLD": 0.2,
+        "RECOVER": 4.1
+      }
+    }
+  },
+  "exact_trace_match": true,
+  "source_sha256": {
+    "swarm_cooperation\\swarm_cooperation\\ideal_sim\\contract.py": "d1c0e135b843420a43eeca5e26cfcd165df3ed252a61f45d60d88b05f00a1656",
+    "swarm_cooperation\\swarm_cooperation\\ideal_sim\\config.py": "de57660f3cdff9b6534430bf708ac0cdbaec03e80e8229307c58d59ff486d32b",
+    "swarm_cooperation\\swarm_cooperation\\ideal_sim\\world.py": "3403c86bcc077b7ad93f88f2dee804f94c9ffcafe8727662fb4749e2d634744f",
+    "swarm_cooperation\\swarm_cooperation\\ideal_sim\\scheduler.py": "fc4ec2c6f459fd68bcb6d24a6995ebd59a96fb70297a1a8e6df0433ef65c2606",
+    "swarm_cooperation\\swarm_cooperation\\ideal_sim\\simulation.py": "28e0c124b8d930d80a606aa0b5672161d46e242ee4a2c34a4fff98d3bbcd2f60",
+    "swarm_cooperation\\swarm_cooperation\\relay_learning\\features.py": "9d0d64e3f9d9db921fd9b6b7f31d9e5dbb5230f9206c679313e1f19b9a970831",
+    "swarm_cooperation\\swarm_cooperation\\relay_learning\\monitor.py": "1bcef837fbeabfea3afd116238732342e97e10fd65e2e56a7b93620525a8b907",
+    "swarm_cooperation\\swarm_cooperation\\relay_learning\\routing.py": "41800c8b11e4b00b6b50eb9b91ea740ae65ed5e5496846f92a4d6f87829e5b43"
+  }
+}

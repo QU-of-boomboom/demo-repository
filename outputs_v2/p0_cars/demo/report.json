@@ -1,0 +1,980 @@
+{
+  "config": {
+    "rounds": 1,
+    "columns": 3,
+    "rows": 4,
+    "vehicle_kind": "ground_car",
+    "cell_m": 1.0,
+    "dt_s": 0.1,
+    "main_speed_mps": 1.0,
+    "relay_speed_mps": 1.5,
+    "terminal_dwell_s": 1.0,
+    "home_dwell_s": 1.0,
+    "mode": "none",
+    "seed": 42,
+    "window_start_s": 2.0,
+    "window_end_s": 12.0,
+    "sensor_range_cells": 0.76,
+    "service_dbm": -75.0,
+    "disconnect_dbm": -88.0,
+    "shelf_loss_db": 12.0,
+    "p0_dbm": -40.0,
+    "path_loss_n": 2.2,
+    "planning_step_cells": 0.5,
+    "initial_stations": [
+      [
+        1.0,
+        2.0
+      ],
+      [
+        2.0,
+        4.0
+      ]
+    ],
+    "model_plugin": "",
+    "predictor_path": "",
+    "inference_timeout_s": 0.2,
+    "inference_period_s": 0.5,
+    "short_horizon_s": 1.5,
+    "deploy_horizon_s": 6.0,
+    "takeoff_s": 0.0,
+    "settle_s": 0.0,
+    "probe_s": 0.2,
+    "route_ack_s": 0.3,
+    "route_timeout_s": 2.0,
+    "min_dwell_s": 1.0,
+    "hysteresis_db": 3.0,
+    "reactive_on_slots": 3,
+    "deployment_timeout_s": 40.0,
+    "measurement_max_age_s": 0.5,
+    "measurement_delay_s": 0.0,
+    "measurement_drop_rate": 0.0,
+    "noise_sigma_db": 0.0,
+    "ack_drop_rate": 0.0,
+    "map_observation": "ideal",
+    "strategy": "predeploy",
+    "rolling_replan_s": 5.0,
+    "battery_reserve": 0.15,
+    "battery_per_m": 0.0005,
+    "battery_per_s": 5e-05,
+    "record_learning": false,
+    "failsafe_hold_s": 5.0
+  },
+  "contract": {
+    "version": "warehouse-abc-v3",
+    "profile_version": "mission-profile-v1",
+    "profile_sha256": "584e8dd05bedb2ae619a604e77ef9acbe23d5e04571d0bc12cfd81501e65974e",
+    "cell_m": 1.0,
+    "dt_s": 0.1,
+    "terminal_dwell_s": 1.0,
+    "home_dwell_s": 1.0,
+    "outward_route": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        4.0
+      ],
+      [
+        1.0,
+        4.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        2.0,
+        0.0
+      ],
+      [
+        2.0,
+        4.0
+      ],
+      [
+        3.0,
+        4.0
+      ],
+      [
+        3.0,
+        0.0
+      ],
+      [
+        3.0,
+        4.0
+      ]
+    ],
+    "single_leg_m": 23.0,
+    "coordinates": "grid; multiply by cell_m for metres",
+    "progress": "distance from current leg start; reset only at leg change; frozen during waits",
+    "segment": "zero-based segment in direction-specific route; vertex belongs to incoming segment",
+    "time": "seconds since run start, monotonic; post-step samples; sample_time_s is acquisition time",
+    "dwell": "at terminal after outbound and home after return, including final round",
+    "radio": {
+      "p0_dbm": -40.0,
+      "path_loss_n": 2.2,
+      "shelf_loss_db": 12.0,
+      "reference_distance_m": 1.0,
+      "gain_db": 0.0,
+      "occlusion": "each occupied cell open interior once; boundaries/corners excluded",
+      "topology": "six symmetric physical links; five simple paths; weakest hop; no gain"
+    }
+  },
+  "run_context": {
+    "entrypoint": "cli",
+    "window_input": "none"
+  },
+  "finished": true,
+  "success": true,
+  "failure_reason": null,
+  "completed_rounds": 1,
+  "single_legs": 2,
+  "total_time_s": 56.7,
+  "phase_time_s": {
+    "DEPLOY": 4.3,
+    "DWELL": 2.0,
+    "FLY": 46.0,
+    "LINK_HOLD": 0.2,
+    "RECOVER": 4.2
+  },
+  "main_distance_m": 46.0,
+  "relay_distance_m": 12.0,
+  "all_phase_outage_s": 2.1,
+  "longest_outage_s": 0.5,
+  "outage_events": 5,
+  "total_switches": 16,
+  "deployment_count": 2,
+  "deployment_successes": 2,
+  "predictor_source": "none",
+  "inference_calls": 0,
+  "inference_fallbacks": 0,
+  "inference_cycle_timing": {
+    "count": 0,
+    "mean_ms": null,
+    "p95_ms": null,
+    "p99_ms": null
+  },
+  "planning_timing": {
+    "count": 11,
+    "mean_ms": 95.34082727094011,
+    "p95_ms": 147.16459999908693,
+    "p99_ms": 147.16459999908693
+  },
+  "relay_hop_s": 33.1,
+  "pingpong_count": 4,
+  "feature_schema": {
+    "schema_version": "relay-link-v2",
+    "history_steps": 20,
+    "dt_s": 0.1,
+    "horizons_s": [
+      1.5,
+      6.0
+    ],
+    "weak_dbm": -75.0,
+    "max_age_s": 0.5,
+    "coordinate_scale_m": 10.0,
+    "input_size": 96,
+    "feature_names": [
+      "history_0_rssi",
+      "history_0_valid",
+      "history_0_age",
+      "history_1_rssi",
+      "history_1_valid",
+      "history_1_age",
+      "history_2_rssi",
+      "history_2_valid",
+      "history_2_age",
+      "history_3_rssi",
+      "history_3_valid",
+      "history_3_age",
+      "history_4_rssi",
+      "history_4_valid",
+      "history_4_age",
+      "history_5_rssi",
+      "history_5_valid",
+      "history_5_age",
+      "history_6_rssi",
+      "history_6_valid",
+      "history_6_age",
+      "history_7_rssi",
+      "history_7_valid",
+      "history_7_age",
+      "history_8_rssi",
+      "history_8_valid",
+      "history_8_age",
+      "history_9_rssi",
+      "history_9_valid",
+      "history_9_age",
+      "history_10_rssi",
+      "history_10_valid",
+      "history_10_age",
+      "history_11_rssi",
+      "history_11_valid",
+      "history_11_age",
+      "history_12_rssi",
+      "history_12_valid",
+      "history_12_age",
+      "history_13_rssi",
+      "history_13_valid",
+      "history_13_age",
+      "history_14_rssi",
+      "history_14_valid",
+      "history_14_age",
+      "history_15_rssi",
+      "history_15_valid",
+      "history_15_age",
+      "history_16_rssi",
+      "history_16_valid",
+      "history_16_age",
+      "history_17_rssi",
+      "history_17_valid",
+      "history_17_age",
+      "history_18_rssi",
+      "history_18_valid",
+      "history_18_age",
+      "history_19_rssi",
+      "history_19_valid",
+      "history_19_age",
+      "link_G-M",
+      "link_G-R1",
+      "link_G-R2",
+      "link_R1-M",
+      "link_R2-M",
+      "link_R1-R2",
+      "now_a_x",
+      "now_a_y",
+      "now_b_x",
+      "now_b_y",
+      "short_a_x",
+      "short_a_y",
+      "short_b_x",
+      "short_b_y",
+      "deploy_a_x",
+      "deploy_a_y",
+      "deploy_b_x",
+      "deploy_b_y",
+      "route_segment",
+      "route_progress",
+      "direction",
+      "main_speed",
+      "r1_x",
+      "r1_y",
+      "r1_target_x",
+      "r1_target_y",
+      "r1_ready",
+      "r1_eta",
+      "r1_battery",
+      "r2_x",
+      "r2_y",
+      "r2_target_x",
+      "r2_target_y",
+      "r2_ready",
+      "r2_eta",
+      "r2_battery"
+    ],
+    "link_order": [
+      "G-M",
+      "G-R1",
+      "G-R2",
+      "R1-M",
+      "R2-M",
+      "R1-R2"
+    ],
+    "output_names": [
+      "weak_short_logit",
+      "weak_deploy_logit"
+    ],
+    "normalization": "fixed-v2: RSSI=(dBm+75)/25; invalid=0; xy metres/10; age/max_age clipped; progress/23; segment/8; speed/2; eta/6",
+    "link_symmetry": "explicit symmetric simulator assumption; validate on hardware"
+  },
+  "change_executed": false,
+  "removal": null,
+  "final_map_matches_truth": true,
+  "final_map": {
+    "version": 0,
+    "nodes": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        2.0
+      ],
+      [
+        0.0,
+        3.0
+      ],
+      [
+        0.0,
+        4.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        2.0
+      ],
+      [
+        1.0,
+        3.0
+      ],
+      [
+        1.0,
+        4.0
+      ],
+      [
+        2.0,
+        0.0
+      ],
+      [
+        2.0,
+        1.0
+      ],
+      [
+        2.0,
+        2.0
+      ],
+      [
+        2.0,
+        3.0
+      ],
+      [
+        2.0,
+        4.0
+      ],
+      [
+        3.0,
+        0.0
+      ],
+      [
+        3.0,
+        1.0
+      ],
+      [
+        3.0,
+        2.0
+      ],
+      [
+        3.0,
+        3.0
+      ],
+      [
+        3.0,
+        4.0
+      ]
+    ],
+    "edges": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          2.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          2.0
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          2.0
+        ],
+        [
+          1.0,
+          2.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          4.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          3.0
+        ],
+        [
+          1.0,
+          3.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          4.0
+        ],
+        [
+          1.0,
+          4.0
+        ]
+      ],
+      [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          2.0
+        ]
+      ],
+      [
+        [
+          1.0,
+          1.0
+        ],
+        [
+          2.0,
+          1.0
+        ]
+      ],
+      [
+        [
+          1.0,
+          2.0
+        ],
+        [
+          1.0,
+          3.0
+        ]
+      ],
+      [
+        [
+          1.0,
+          2.0
+        ],
+        [
+          2.0,
+          2.0
+        ]
+      ],
+      [
+        [
+          1.0,
+          3.0
+        ],
+        [
+          1.0,
+          4.0
+        ]
+      ],
+      [
+        [
+          1.0,
+          3.0
+        ],
+        [
+          2.0,
+          3.0
+        ]
+      ],
+      [
+        [
+          1.0,
+          4.0
+        ],
+        [
+          2.0,
+          4.0
+        ]
+      ],
+      [
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          1.0
+        ]
+      ],
+      [
+        [
+          2.0,
+          0.0
+        ],
+        [
+          3.0,
+          0.0
+        ]
+      ],
+      [
+        [
+          2.0,
+          1.0
+        ],
+        [
+          2.0,
+          2.0
+        ]
+      ],
+      [
+        [
+          2.0,
+          1.0
+        ],
+        [
+          3.0,
+          1.0
+        ]
+      ],
+      [
+        [
+          2.0,
+          2.0
+        ],
+        [
+          2.0,
+          3.0
+        ]
+      ],
+      [
+        [
+          2.0,
+          2.0
+        ],
+        [
+          3.0,
+          2.0
+        ]
+      ],
+      [
+        [
+          2.0,
+          3.0
+        ],
+        [
+          2.0,
+          4.0
+        ]
+      ],
+      [
+        [
+          2.0,
+          3.0
+        ],
+        [
+          3.0,
+          3.0
+        ]
+      ],
+      [
+        [
+          2.0,
+          4.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ],
+      [
+        [
+          3.0,
+          0.0
+        ],
+        [
+          3.0,
+          1.0
+        ]
+      ],
+      [
+        [
+          3.0,
+          1.0
+        ],
+        [
+          3.0,
+          2.0
+        ]
+      ],
+      [
+        [
+          3.0,
+          2.0
+        ],
+        [
+          3.0,
+          3.0
+        ]
+      ],
+      [
+        [
+          3.0,
+          3.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ]
+    ],
+    "occupied": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "observed_cells": 12,
+    "node_samples": [
+      {
+        "node": [
+          0.0,
+          0.0
+        ],
+        "sample_time_s": 51.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -40.0
+      },
+      {
+        "node": [
+          0.0,
+          1.0
+        ],
+        "sample_time_s": 50.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -40.0
+      },
+      {
+        "node": [
+          0.0,
+          2.0
+        ],
+        "sample_time_s": 49.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -46.62265990460745
+      },
+      {
+        "node": [
+          0.0,
+          3.0
+        ],
+        "sample_time_s": 48.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -50.49666760383253
+      },
+      {
+        "node": [
+          0.0,
+          4.0
+        ],
+        "sample_time_s": 47.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -53.245319809215175
+      },
+      {
+        "node": [
+          1.0,
+          0.0
+        ],
+        "sample_time_s": 42.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -40.00000000000032
+      },
+      {
+        "node": [
+          1.0,
+          1.0
+        ],
+        "sample_time_s": 43.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -55.311329952303616
+      },
+      {
+        "node": [
+          1.0,
+          2.0
+        ],
+        "sample_time_s": 44.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -71.68867004769605
+      },
+      {
+        "node": [
+          1.0,
+          3.0
+        ],
+        "sample_time_s": 45.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -86.99999999999991
+      },
+      {
+        "node": [
+          1.0,
+          4.0
+        ],
+        "sample_time_s": 46.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -101.53493813516098
+      },
+      {
+        "node": [
+          2.0,
+          0.0
+        ],
+        "sample_time_s": 41.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -46.62265990460759
+      },
+      {
+        "node": [
+          2.0,
+          1.0
+        ],
+        "sample_time_s": 40.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -71.68867004769626
+      },
+      {
+        "node": [
+          2.0,
+          2.0
+        ],
+        "sample_time_s": 39.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -73.93398985691144
+      },
+      {
+        "node": [
+          2.0,
+          3.0
+        ],
+        "sample_time_s": 38.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -100.25337687537524
+      },
+      {
+        "node": [
+          2.0,
+          4.0
+        ],
+        "sample_time_s": 37.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -102.31132995230381
+      },
+      {
+        "node": [
+          3.0,
+          0.0
+        ],
+        "sample_time_s": 32.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -50.49666760383258
+      },
+      {
+        "node": [
+          3.0,
+          1.0
+        ],
+        "sample_time_s": 33.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -87.0
+      },
+      {
+        "node": [
+          3.0,
+          2.0
+        ],
+        "sample_time_s": 34.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -100.2533768753752
+      },
+      {
+        "node": [
+          3.0,
+          3.0
+        ],
+        "sample_time_s": 35.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -89.80799755613634
+      },
+      {
+        "node": [
+          3.0,
+          4.0
+        ],
+        "sample_time_s": 36.5,
+        "map_version": 0,
+        "direct_rssi_dbm": -127.3773400953924
+      }
+    ]
+  },
+  "legs": [
+    {
+      "round": 1,
+      "direction": "outbound",
+      "distance_m": 23.0,
+      "flight_s": 23.0,
+      "outage_s": 1.3,
+      "weak_s": 4.1,
+      "relay_hop_s": 14.4,
+      "switches": 7,
+      "map_version": 0,
+      "stations": [
+        [
+          2.0,
+          2.0
+        ],
+        [
+          0.0,
+          2.0
+        ]
+      ]
+    },
+    {
+      "round": 1,
+      "direction": "return",
+      "distance_m": 23.0,
+      "flight_s": 23.0,
+      "outage_s": 0.8,
+      "weak_s": 4.7,
+      "relay_hop_s": 17.4,
+      "switches": 8,
+      "map_version": 0,
+      "stations": [
+        [
+          2.0,
+          2.0
+        ],
+        [
+          0.0,
+          2.0
+        ]
+      ]
+    }
+  ],
+  "second_outbound": null,
+  "model_plugin": "CPU enumeration (no trained AI)",
+  "assumptions": [
+    "perfect position; occupancy observation=ideal",
+    "finite-speed kinematics; serialized relay motion; main waits during deployment",
+    "simulated takeoff/settling/probe/commit/ACK, not a real radio implementation",
+    "six symmetric physical links; configurable noise/drop/delay",
+    "onboard failsafe uses link-observation availability as a heartbeat proxy",
+    "one occupied cell contributes one shelf loss; no +6dB gain",
+    "battery is a proxy; no aerodynamic or full collision avoidance model"
+  ]
+}

@@ -1,0 +1,17 @@
+test_every_sample_has_valid_motion_and_reverse_replay (test_simulation.MissionTests.test_every_sample_has_valid_motion_and_reverse_replay) ... ok
+test_geometry_and_accepted_duration (test_simulation.MissionTests.test_geometry_and_accepted_duration) ... ok
+test_optional_39s_variant_has_explicit_different_endpoint (test_simulation.MissionTests.test_optional_39s_variant_has_explicit_different_endpoint) ... ok
+test_seeded_pickups_are_reproducible_unique_and_reachable (test_simulation.MissionTests.test_seeded_pickups_are_reproducible_unique_and_reachable) ... ok
+test_switch_evidence_and_takeover_quality (test_simulation.MissionTests.test_switch_evidence_and_takeover_quality) ... ok
+test_deduplicates_columns_and_is_symmetric (test_simulation.RadioGeometryTests.test_deduplicates_columns_and_is_symmetric) ... ok
+test_grid_lines_and_corner_touches_do_not_penetrate_shelves (test_simulation.RadioGeometryTests.test_grid_lines_and_corner_touches_do_not_penetrate_shelves) ... ok
+test_reference_and_known_rssi (test_simulation.RadioGeometryTests.test_reference_and_known_rssi) ... ok
+test_emergency_uses_available_link_even_without_three_db_gain (test_simulation.SchedulerTests.test_emergency_uses_available_link_even_without_three_db_gain) ... ok
+test_relay_to_relay_hysteresis (test_simulation.SchedulerTests.test_relay_to_relay_hysteresis) ... ok
+test_three_db_return_hysteresis_rejects_threshold_noise (test_simulation.SchedulerTests.test_three_db_return_hysteresis_rejects_threshold_noise) ... ok
+test_trigger_is_strict_and_selects_best_relay (test_simulation.SchedulerTests.test_trigger_is_strict_and_selects_best_relay) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.661s
+
+OK

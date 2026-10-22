@@ -1,0 +1,134 @@
+{
+  "config": {
+    "dt_s": 0.1,
+    "speed_m_s": 1.0,
+    "pickup_dwell_s": 1.0,
+    "p0_dbm": -40.0,
+    "path_loss_exponent": 2.2,
+    "shelf_loss_db": 12.0,
+    "relay_gain_db": 6.0,
+    "relay_threshold_dbm": -75.0,
+    "disconnect_threshold_dbm": -88.0,
+    "hysteresis_db": 3.0,
+    "seed": 7,
+    "endpoint": "upper-right"
+  },
+  "route": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.0
+    ],
+    [
+      1.0,
+      4.0
+    ],
+    [
+      1.0,
+      0.0
+    ],
+    [
+      2.0,
+      0.0
+    ],
+    [
+      2.0,
+      4.0
+    ],
+    [
+      3.0,
+      4.0
+    ],
+    [
+      3.0,
+      0.0
+    ],
+    [
+      3.0,
+      4.0
+    ]
+  ],
+  "targets": [
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "picked": [
+    {
+      "cell": [
+        1,
+        1
+      ],
+      "time_s": 0.5,
+      "position": [
+        0.0,
+        0.5
+      ]
+    },
+    {
+      "cell": [
+        1,
+        3
+      ],
+      "time_s": 2.5,
+      "position": [
+        0.0,
+        2.5
+      ]
+    },
+    {
+      "cell": [
+        2,
+        3
+      ],
+      "time_s": 6.5,
+      "position": [
+        1.0,
+        2.5
+      ]
+    }
+  ],
+  "arrival_time_s": 23.0,
+  "turnaround_time_s": 24.0,
+  "total_time_s": 47.0,
+  "flight_time_s": 46.0,
+  "distance_m": 46.0,
+  "return_is_exact_reverse": true,
+  "validation": {
+    "checks": {
+      "no_disconnect": true,
+      "at_least_four_switches": true,
+      "relay_takeover_above_minus75": true,
+      "returned_to_origin": true,
+      "all_selected_goods_collected_once": true,
+      "return_is_exact_reverse": true,
+      "constant_timestep": true,
+      "speed_and_distance": true,
+      "route_time_matches_geometry": true,
+      "selected_endpoint_reached": true
+    },
+    "model_checks_pass": true,
+    "accepted_total_time_s": 47.0,
+    "accepted_endpoint": [
+      3.0,
+      4.0
+    ],
+    "all_acceptance_checks_pass": true,
+    "min_rssi_dbm": -74.88394799433361,
+    "switch_count": 6,
+    "relay_takeover_count": 3,
+    "sample_count": 471
+  }
+}

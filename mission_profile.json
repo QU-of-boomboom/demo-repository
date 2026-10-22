@@ -1,0 +1,137 @@
+{
+  "schema_version": "mission-profile-v1",
+  "contract_version": "warehouse-abc-v3",
+  "updated": "2026-10-21",
+  "vehicle": {
+    "kind": "relay_drone",
+    "main": "drone",
+    "relay": "drone",
+    "relay_count": 2,
+    "note": "P0 archive profile; switch to mission_profile_1drone_2cars.json for the ground-car variant."
+  },
+  "map": {
+    "columns": 3,
+    "rows": 4,
+    "cell_m": 1.0,
+    "route": [
+      [0.0, 0.0],
+      [0.0, 4.0],
+      [1.0, 4.0],
+      [1.0, 0.0],
+      [2.0, 0.0],
+      [2.0, 4.0],
+      [3.0, 4.0],
+      [3.0, 0.0],
+      [3.0, 4.0]
+    ],
+    "occupied_cells": [
+      [1, 1], [1, 2], [1, 3], [1, 4],
+      [2, 1], [2, 2], [2, 3], [2, 4],
+      [3, 1], [3, 2], [3, 3], [3, 4]
+    ]
+  },
+  "timing": {
+    "dt_s": 0.1,
+    "main_speed_mps": 1.0,
+    "relay_speed_mps": 2.0,
+    "terminal_dwell_s": 1.0,
+    "home_dwell_s": 1.0,
+    "takeoff_s": 2.0,
+    "settle_s": 0.5,
+    "probe_s": 0.2,
+    "route_ack_s": 0.3,
+    "route_timeout_s": 2.0,
+    "measurement_max_age_s": 0.5,
+    "failsafe_hold_s": 5.0,
+    "deployment_timeout_s": 40.0
+  },
+  "radio": {
+    "p0_dbm": -40.0,
+    "path_loss_n": 2.2,
+    "shelf_loss_db": 12.0,
+    "reference_distance_m": 1.0,
+    "gain_db": 0.0,
+    "gain_note": "no +6 dB assumption; path quality is the minimum physical hop",
+    "links": [
+      {"id": "G-M", "a": 0, "b": 3},
+      {"id": "G-R1", "a": 0, "b": 1},
+      {"id": "G-R2", "a": 0, "b": 2},
+      {"id": "R1-M", "a": 1, "b": 3},
+      {"id": "R2-M", "a": 2, "b": 3},
+      {"id": "R1-R2", "a": 1, "b": 2}
+    ]
+  },
+  "topology": {
+    "node_order": ["ground", "r1", "r2", "main"],
+    "paths": [
+      {"route": [], "links": ["G-M"]},
+      {"route": [1], "links": ["G-R1", "R1-M"]},
+      {"route": [2], "links": ["G-R2", "R2-M"]},
+      {"route": [1, 2], "links": ["G-R1", "R1-R2", "R2-M"]},
+      {"route": [2, 1], "links": ["G-R2", "R1-R2", "R1-M"]}
+    ]
+  },
+  "thresholds": {
+    "service_dbm": -75.0,
+    "disconnect_dbm": -88.0,
+    "hysteresis_db": 3.0,
+    "min_dwell_s": 1.0,
+    "reactive_on_slots": 3,
+    "reactive_off_dbm": -72.0
+  },
+  "mission": {
+    "rounds": 5,
+    "mode": "random",
+    "seed": 42,
+    "window_start_s": 2.0,
+    "window_end_s": 12.0,
+    "sensor_range_cells": 0.76,
+    "map_observation": "ideal",
+    "strategy": "predeploy"
+  },
+  "stations": {
+    "initial": [[1.0, 2.0], [2.0, 4.0]],
+    "candidates": [
+      [0.0, 0.0], [0.0, 1.0], [0.0, 2.0], [0.0, 3.0], [0.0, 4.0],
+      [1.0, 0.0], [1.0, 1.0], [1.0, 2.0], [1.0, 3.0], [1.0, 4.0],
+      [2.0, 0.0], [2.0, 1.0], [2.0, 2.0], [2.0, 3.0], [2.0, 4.0],
+      [3.0, 0.0], [3.0, 1.0], [3.0, 2.0], [3.0, 3.0], [3.0, 4.0]
+    ]
+  },
+  "scheduling": {
+    "planning_step_cells": 0.5,
+    "rolling_replan_s": 5.0,
+    "deploy_horizon_s": 6.0,
+    "short_horizon_s": 1.5,
+    "inference_timeout_s": 0.2,
+    "inference_period_s": 0.5,
+    "battery_reserve": 0.15,
+    "battery_per_m": 0.0005,
+    "battery_per_s": 0.00005
+  },
+  "baselines": {
+    "rounds": 5,
+    "seeds": [42, 43, 44, 45, 46],
+    "strategies": ["reactive", "predeploy"],
+    "noise_sigma_db": 1.0,
+    "measurement_delay_s": 0.1,
+    "measurement_drop_rate": 0.02,
+    "map_observation": "static",
+    "archive": "outputs_v2/p0/baselines"
+  },
+  "legacy": {
+    "historical_b": {
+      "cell_m": 2.0,
+      "pick_s": 3.0,
+      "frozen": true,
+      "archive": "swarm_cooperation/swarm_cooperation/legacy_v1",
+      "note": "B --legacy runs this frozen snapshot; archive-only and never used as a current parameter source."
+    },
+    "compatibility_b": {
+      "cell_m": 1.0,
+      "pick_s": 1.0,
+      "param_source": false,
+      "note": "Current single-round SwarmSimulation/SITL library stays at 1 m/cell and 1 s; it is not the --legacy entry and not part of warehouse-abc-v3."
+    }
+  }
+}

@@ -1,0 +1,15 @@
+test_anticipation_and_no_artificial_zero_delay_outage (test_core.CoreTests.test_anticipation_and_no_artificial_zero_delay_outage) ... ok
+test_future_labels_exclude_present_and_require_full_horizon (test_core.CoreTests.test_future_labels_exclude_present_and_require_full_horizon) ... ok
+test_history_causality_and_padding (test_core.CoreTests.test_history_causality_and_padding) ... ok
+test_hysteresis_and_episode_definition (test_core.CoreTests.test_hysteresis_and_episode_definition) ... ok
+test_independent_scalar_geometry_oracle (test_core.CoreTests.test_independent_scalar_geometry_oracle) ... ok
+test_nominal_route_and_endpoints (test_core.CoreTests.test_nominal_route_and_endpoints) ... ok
+test_scheduler_does_not_look_ahead (test_core.CoreTests.test_scheduler_does_not_look_ahead) ... ok
+test_seed_streams_and_physical_ranges (test_core.CoreTests.test_seed_streams_and_physical_ranges) ... ok
+test_shelf_geometry_and_reference_distance (test_core.CoreTests.test_shelf_geometry_and_reference_distance) ... ok
+test_threshold_selection_matches_direct_counts (test_core.CoreTests.test_threshold_selection_matches_direct_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.200s
+
+OK

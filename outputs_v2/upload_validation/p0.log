@@ -1,0 +1,7 @@
+C: {'tests': 8, 'failures': 0, 'errors': 0, 'skipped': 0, 'passed': True, 'failure_details': [], 'skipped_details': [], 'returncode': 0}
+A_legacy: {'tests': 12, 'failures': 0, 'errors': 0, 'skipped': 0, 'passed': True, 'failure_details': [], 'skipped_details': [], 'returncode': 0}
+B_legacy: {'tests': 1, 'failures': 0, 'errors': 0, 'skipped': 0, 'passed': True, 'failure_details': [], 'skipped_details': [], 'returncode': 0}
+C_legacy: {'tests': 10, 'failures': 0, 'errors': 0, 'skipped': 0, 'passed': True, 'failure_details': [], 'skipped_details': [], 'returncode': 0}
+A: {'tests': 24, 'failures': 0, 'errors': 0, 'skipped': 0, 'passed': True, 'failure_details': [], 'skipped_details': [], 'returncode': 0}
+B: {'tests': 46, 'failures': 0, 'errors': 0, 'skipped': 0, 'passed': True, 'failure_details': [], 'skipped_details': [], 'returncode': 0}
+{"passed": true, "checks": {"trajectory_six_hop_diff": true, "motion_eta_and_observation_tests": true, "rule_baselines_archived": true, "all_module_and_legacy_tests_no_skips": true, "mission_profile_single_source": true, "readme_contract_and_gain_retirement": true, "feature_96_and_weights_frozen": true}}

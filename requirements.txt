@@ -1,0 +1,4 @@
+# Full development / validation dependencies. The ground-car demo uses stdlib only.
+-r ai_relay_scheduler/ai_relay_scheduler/requirements.txt
+-r swarm_cooperation/swarm_cooperation/requirements.txt
+-r warehouse_relay_sim/warehouse_relay_sim/requirements.txt

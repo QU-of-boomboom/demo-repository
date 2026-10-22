@@ -1,0 +1,16 @@
+{
+  "feature_manifest_unchanged": true,
+  "protected_files_unchanged": true,
+  "protected_sha256": {
+    "swarm_cooperation\\swarm_cooperation\\relay_learning\\features.py": "9d0d64e3f9d9db921fd9b6b7f31d9e5dbb5230f9206c679313e1f19b9a970831",
+    "ai_relay_scheduler\\ai_relay_scheduler\\outputs\\model_fp32.onnx": "79c7020b70e04ca19104f7582f2c80d35ad9defa7603b34be14c40a1a858d5d7",
+    "ai_relay_scheduler\\ai_relay_scheduler\\outputs\\model_fp32_batch1.onnx": "0a7de2da3bc7cc5b1a9770adeed2df9665f6b64a3225547356c6eacd07a464da",
+    "ai_relay_scheduler\\ai_relay_scheduler\\outputs\\model_int8.onnx": "a6a2ea52bc63e534076848c1b8a91eb1c6493aedc3511996695bb049317f4f26",
+    "ai_relay_scheduler\\ai_relay_scheduler\\outputs\\model_preprocessed.onnx": "83680c8cb8e8b659378578c3bcd8d75cb05d136701b0f8760a964983479f9b1c",
+    "ai_relay_scheduler\\ai_relay_scheduler\\outputs_v2\\smoke\\model_fp32_batch1.onnx": "01aa41ed89e374ca5c84dc72cd88a492f9c69b899b64e2feca726c9225627f7f",
+    "ai_relay_scheduler\\ai_relay_scheduler\\outputs_v2\\smoke\\model_int8_pc.onnx": "6cc2d507343b6796ded5009fed74838a0ce677de530c576f4a49184f636ee938",
+    "ai_relay_scheduler\\ai_relay_scheduler\\outputs_v2\\smoke\\model_preprocessed.onnx": "b41f53dd429cf27de3fe79c60490724e00729e41b7df201d4b6ec3d603625312",
+    "ai_relay_scheduler\\ai_relay_scheduler\\outputs\\model.pt": "742a56f434a97a35c364e50834af20f1a1fa20d04255f5cc4d0c24491aa9653e",
+    "ai_relay_scheduler\\ai_relay_scheduler\\outputs_v2\\smoke\\model.pt": "b26c2a164ce94aae74281d8da12fcf8681ca1d5b59a1462623751397214bb34f"
+  }
+}
